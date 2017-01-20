@@ -31,3 +31,6 @@ set tw=0
 
 " display line numbers
 set number
+
+" turn on syntax highlighting
+syntax on
