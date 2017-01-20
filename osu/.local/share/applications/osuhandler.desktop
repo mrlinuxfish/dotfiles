@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment[en_US]=
+Exec=/home/atomsk/.osu/osuhandler.sh %u
+GenericName[en_US]=Osu URI Handler
+Icon=/home/atomsk/Downloads/Logo.png
+MimeType=
+Name[en_US]=Osu! URI Handler
+Name=Osu!
+NoDisplay=false
+Path[$e]=
+StartupNotify=true
+Terminal=0
+Type=Application
