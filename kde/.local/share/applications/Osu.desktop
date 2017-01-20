@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=WINEPREFIX=~/.osu wine ~/osu\\!/osu\\!.exe\n
+GenericName[en_US]=Rhythm Game
+GenericName=Rhythm Game
+Icon=/home/atomsk/Downloads/Logo.png
+MimeType=
+Name[en_US]=Osu!
+Name=Osu!
+NoDisplay=false
+Path[$e]=
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
