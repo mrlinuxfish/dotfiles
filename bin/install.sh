@@ -6,4 +6,4 @@
 echo "the script is not finished :("
 
 # run the backup script
-#Backup.sh
+"$(dirname "$0")"/backup.sh
