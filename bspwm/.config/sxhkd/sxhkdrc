@@ -84,6 +84,10 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+# Mouse
+~button1
+	bspc pointer -g focus
+
 #
 # preselect
 #

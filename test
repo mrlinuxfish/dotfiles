@@ -1,0 +1,45 @@
+stow: No packages to stow or unstow
+
+stow (GNU Stow) version 2.2.2
+
+SYNOPSIS:
+
+    stow [OPTION ...] [-D|-S|-R] PACKAGE ... [-D|-S|-R] PACKAGE ...
+
+OPTIONS:
+
+    -d DIR, --dir=DIR     Set stow dir to DIR (default is current dir)
+    -t DIR, --target=DIR  Set target to DIR (default is parent of stow dir)
+
+    -S, --stow            Stow the package names that follow this option
+    -D, --delete          Unstow the package names that follow this option
+    -R, --restow          Restow (like stow -D followed by stow -S)
+
+    --ignore=REGEX        Ignore files ending in this Perl regex
+    --defer=REGEX         Don't stow files beginning with this Perl regex
+                          if the file is already stowed to another package
+    --override=REGEX      Force stowing files beginning with this Perl regex
+                          if the file is already stowed to another package
+    --adopt               (Use with care!)  Import existing files into stow package
+                          from target.  Please read docs before using.
+    -p, --compat          Use legacy algorithm for unstowing
+
+    -n, --no, --simulate  Do not actually make any filesystem changes
+    -v, --verbose[=N]     Increase verbosity (levels are 0,1,2,3;
+                            -v or --verbose adds 1; --verbose=N sets level)
+    -V, --version         Show stow version number
+    -h, --help            Show this help
+
+Report bugs to: bug-stow@gnu.org
+Stow home page: <http://www.gnu.org/software/stow/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+WARNING! stowing bspwm would cause conflicts:
+  * existing target is neither a link nor a directory: .config/bspwm/bspwmrc
+  * existing target is neither a link nor a directory: .config/panel/bspwmrc
+  * existing target is neither a link nor a directory: .config/panel/panel
+  * existing target is neither a link nor a directory: .config/panel/panel_bar
+  * existing target is neither a link nor a directory: .config/panel/panel_colors
+  * existing target is neither a link nor a directory: .config/panel/profile
+  * existing target is neither a link nor a directory: .config/panel/sxhkdrc
+  * existing target is neither a link nor a directory: .config/sxhkd/sxhkdrc
+All operations aborted.
