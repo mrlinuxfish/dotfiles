@@ -1,0 +1,84 @@
+[Wacom Bamboo Pen & Touch]
+CurrentProfileEntry=-1
+ProfileRotationList=
+
+[Wacom Bamboo Pen & Touch][Default][eraser]
+Area=0 436 11255 6364
+Button1=1
+Button2=10
+Button3=3
+Mode=absolute
+RawSample=1
+Rotate=none
+ScreenMap=desktop:0 436 11255 6364|map1:0 0 14720 9200|map0:0 0 14720 9200
+ScreenSpace=desktop
+Suppress=0
+Threshold=0
+
+[Wacom Bamboo Pen & Touch][Default][pad]
+Button1=key esc
+Button2=9
+Button3=0
+Button4=key esc
+
+[Wacom Bamboo Pen & Touch][Default][stylus]
+Area=0 436 11255 6364
+Button1=1
+Button2=10
+Button3=3
+Mode=absolute
+RawSample=1
+Rotate=none
+ScreenMap=desktop:0 436 11255 6364|map1:0 0 14720 9200|map0:0 0 14720 9200
+ScreenSpace=desktop
+Suppress=0
+TabletPcButton=off
+Threshold=0
+
+[Wacom Bamboo Pen & Touch][Default][touch]
+Area=0 0 0 0
+Gesture=off
+InvertScroll=off
+Mode=relative
+Rotate=none
+ScreenSpace=desktop
+ScrollDistance=0
+TapTime=0
+Touch=off
+ZoomDistance=0
+
+[Wacom BambooPT 2FG 4x5 Pad pad][Default][eraser]
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+Suppress=2
+Threshold=27
+
+[Wacom BambooPT 2FG 4x5 Pad pad][Default][pad]
+AbsWheelDown=5
+AbsWheelUp=4
+
+[Wacom BambooPT 2FG 4x5 Pad pad][Default][stylus]
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+Suppress=2
+Threshold=27
+
+[Wacom BambooPT 2FG 4x5 Pad pad][Default][touch]
+Gesture=on
+InvertScroll=off
+Mode=absolute
+Rotate=auto
+ScrollDistance=20
+TapTime=250
+Touch=on
+ZoomDistance=50
