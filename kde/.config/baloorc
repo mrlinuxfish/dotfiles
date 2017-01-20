@@ -1,0 +1,12 @@
+[Akonadi]
+agentIndexingVersion=4
+dirtyCollections=
+initialIndexingDone=true
+
+[Basic Settings]
+Indexing-Enabled=true
+
+[General]
+exclude folders[$e]=/mnt/data/steam,/mnt/video/GOG,/mnt/video/WindowsImageBackup,/mnt/data/Blizzard
+first run=true
+folders[$e]=$HOME,/mnt/data/documents,/mnt/data/downloads,/mnt/video/osu!,/mnt/video/Osu!

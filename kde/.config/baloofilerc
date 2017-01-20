@@ -1,0 +1,10 @@
+[Basic Settings]
+Indexing-Enabled=true
+
+[General]
+dbVersion=2
+exclude filters=.xsession-errors*,*.pyc,confdefs.h,CMakeFiles,.git,lost+found,*.lo,*.tmp,_darcs,autom4te,CMakeCache.txt,.histfile.*,qrc_*.cpp,.obj,CTestTestfile.cmake,libtool,litmain.sh,*.elc,config.status,CMakeTmp,*.la,confstat,*.csproj,*.aux,*.po,.hg,.uic,*.part,.moc,*.vm*,*.nvram,.pch,core-dumps,*.swap,*.rcore,*.orig,*.gmo,*.o,ui_*.h,po,cmake_install.cmake,Makefile.am,.svn,*.moc,*~,*.omf,*.pc,*.rej,conftest,CMakeTmpQmake,*.m4,__pycache__,lzo,*.class,.bzr,CVS,moc_*.cpp,*.loT
+exclude filters version=2
+exclude folders[$e]=/mnt/data/,/mnt/video/
+first run=false
+folders[$e]=$HOME,/mnt/data/documents,/mnt/data/downloads,/mnt/video/osu!,/mnt/video/Osu!
