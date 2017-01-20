@@ -5,5 +5,3 @@
 
 echo "the script is not finished :("
 
-# run the backup script
-"$(dirname "$0")"/backup.sh
