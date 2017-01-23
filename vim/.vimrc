@@ -34,3 +34,15 @@ set number
 
 " turn on syntax highlighting
 syntax on
+
+" set pastebuffer to the + register
+set clipboard=unnamedplus
+
+" turn off vi compatibility so vim works better
+set nocompatible
+
+" enable netrw file manager plugin
+filetype plugin on
+
+" Search into subfolders
+set path+=**
