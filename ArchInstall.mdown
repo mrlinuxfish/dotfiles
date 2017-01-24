@@ -15,7 +15,7 @@
 
 ## Post reboot ##
 - Login to system (duh)
-- Install dependencies for packer: ``
+- Install dependencies for packer: `pkgconfig`
 - Install packer from aur: `curl [packer package url]`, unzip package, cd into package, `makepkg`, `pacman -U [package]`
 - Download dotfiles from git
 
