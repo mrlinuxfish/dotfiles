@@ -1,17 +1,13 @@
 # Installation Documentation for Arch Linux #
----------------------------------------------
 
 ## Table of Contents ##
 1. Changelog 
 2. Installed Packages & Mandatory Dependencies 
 3. 
----------------------------------------------
 
 ## 1.0 Changelog ##
----------------------------------------------
 
 ## 2.0 Packages ##
----------------------------------------------
 - base & base-devel
 - vim powerline-vim
 - sudo
