@@ -29,8 +29,9 @@ set t_Co=256
 set nowrap
 set tw=0
 
-" display relative line numbers
+" display relative line numbers and have current line display absolute number
 set relativenumber
+set number
 
 " turn on syntax highlighting
 syntax on
