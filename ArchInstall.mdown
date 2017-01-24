@@ -16,12 +16,14 @@
 ## Post reboot ##
 - Login to system (duh)
 - Install dependencies for packer: ``
-- Install packer from aur (`curl [packer package url]`, unzip package, cd into package, `makepkg`, pacman -U [package])
+- Install packer from aur (`curl [packer package url]`, unzip package, cd into package, `makepkg`, `pacman -U [package]`)
 - Download dotfiles from git
 
 ## Nvidia specific stuff ##
 - Install `nvidia-dkms` driver package
+
 ## Window Managers: ##
+
 ### Bspwm specific stuff ###
 - Install: `bspwm sxhkd termite`
 - Install from aur: `polybar`
