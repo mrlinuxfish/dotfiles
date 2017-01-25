@@ -27,6 +27,7 @@
 ### Bspwm specific stuff ###
 - Install: `bspwm sxhkd termite`
 - Install: from aur: `polybar`
+- Install `feh` to set background image
 
 ### KDE specific stuff ###
 - Install: kde package `xfce-terminal`
