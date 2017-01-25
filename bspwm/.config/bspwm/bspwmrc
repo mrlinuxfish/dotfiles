@@ -1,10 +1,24 @@
 #! /bin/sh
 
 sxhkd &
+
+# turn on polybar
 polybar top &
-setxkbmap -option caps:escape 
+
+# set caps to escape
+setxkbmap -option caps:escape
+
+# make the 'X' cursor use the regular cursor shape
 xsetroot -cursor_name left_ptr
+
+# Start redshift
 redshift &
+
+# start the compton service
+compton -b
+
+# use feh to set background
+feh --bg-fill $HOME/.config/backgrounds/abstract-mosaic-background.png
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
