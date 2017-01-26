@@ -15,7 +15,7 @@ xsetroot -cursor_name left_ptr
 redshift &
 
 # Start whatpulse
-whatpulse --closedwindow &
+whatpulse --closedwindow --delaystartup &
 
 # start the compton service
 compton -b
