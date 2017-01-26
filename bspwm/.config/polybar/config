@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #222
+background = #7a000000
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #55
@@ -55,7 +55,7 @@ modules-right = volume memory cpu battery temperature date powermenu
 tray-position = right
 tray-padding = 2
 tray-transparent = true
-;tray-background = #0063ff
+;tray-background = #0063ffff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
