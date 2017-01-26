@@ -47,3 +47,6 @@ filetype plugin on
 
 " Search into subfolders
 set path+=**
+
+" Highlight searches
+set hlsearch
