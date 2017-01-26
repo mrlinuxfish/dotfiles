@@ -55,7 +55,7 @@ modules-right = volume memory cpu battery temperature date powermenu
 tray-position = right
 tray-padding = 2
 tray-transparent = true
-;tray-background = #0063ffff
+tray-background = ${root.background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
