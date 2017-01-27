@@ -76,3 +76,5 @@ autocmd FileType asm set noexpandtab shiftwidth=8 softtabstop=0 syntax=nasm
 " Set tab width for ruby
 autocmd Filetype ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=2 autoindent
 
+" Set autocomplete for ruby
+autocmd Filetype ruby set omnifunc=syntaxcomplete#Complete
