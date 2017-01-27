@@ -48,5 +48,31 @@ filetype plugin on
 " Search into subfolders
 set path+=**
 
+" Enable filetype detection
+filetype on
+filetype plugin on
+filetype indent on " allows for file type indentation
+
 " Highlight searches
 set hlsearch
+
+" Set tab widths
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" Set makefiles to use full tabs
+autocmd Filetype make set noexpandtab shiftwidth=8 softtabstop=0
+
+" Set c-like programming tabs
+autocmd FileType c,cpp,java set formatoptions+=ro
+
+" Set autocomplete for c
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+" ensure normal tabs in assembly files and set to NASM syntax highlighting
+autocmd FileType asm set noexpandtab shiftwidth=8 softtabstop=0 syntax=nasm
+
+" Set tab width for ruby
+autocmd Filetype ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=2 autoindent
+
