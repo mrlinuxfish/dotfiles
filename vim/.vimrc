@@ -10,6 +10,18 @@
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
 
+" Set runtime path, include Vundle plugin and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage itself
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'vim-airline/vim-airline'
+
+"End Vundle
+call vundle#end()
+
 " Always show statusline
 set laststatus=2
 
