@@ -23,6 +23,9 @@ compton -b
 # use feh to set background
 feh --bg-fill $HOME/.config/backgrounds/abstract-mosaic-background.png
 
+# start dnsmasq
+dnsmasq &
+
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
