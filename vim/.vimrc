@@ -19,6 +19,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-airline/vim-airline'
 
+Plugin 'ervandew/supertab'
+
 "End Vundle
 call vundle#end()
 
