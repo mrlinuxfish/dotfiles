@@ -26,6 +26,9 @@ Plugin 'tpope/vim-fugitive'
 "End Vundle
 call vundle#end()
 
+" Set powerline font
+let g:airline_powerline_fonts = 1
+
 " Always show statusline
 set laststatus=2
 
