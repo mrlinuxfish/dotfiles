@@ -29,6 +29,7 @@
 - Install: from aur: `polybar`
 - Install `feh` to set background image
 - Install `udisks2 ntfs-3g dosfstools` for filesystem management
+- Install `xorg-xprop xdotool xorg-xwebinfo` for bspwm scratchpad
 
 ### KDE specific stuff ###
 - Install: kde package `xfce-terminal`
