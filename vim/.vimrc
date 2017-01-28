@@ -10,8 +10,6 @@
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
 
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
 " Always show statusline
 set laststatus=2
 
