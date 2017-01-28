@@ -39,3 +39,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Whatpulse state=floating
+
+# Set rules for steam
+bspc rule -a Steam desktop='^3'
+bspc rule -a Friends desktop='3'
