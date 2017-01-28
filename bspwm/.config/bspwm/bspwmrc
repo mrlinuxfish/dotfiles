@@ -26,6 +26,9 @@ feh --bg-fill $HOME/.config/backgrounds/abstract-mosaic-background.png
 # start dnsmasq
 dnsmasq &
 
+# start udiskie to mount devices
+udiskie -a &
+
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
