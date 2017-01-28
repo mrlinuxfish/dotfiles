@@ -28,7 +28,7 @@
 - Install: `bspwm sxhkd termite`
 - Install: from aur: `polybar`
 - Install `feh` to set background image
-- Install `udisks2 ntfs-3g dosfstools` for filesystem management
+- Install `udisks2 ntfs-3g dosfstools exfat-utils` for filesystem management
 - Install `xorg-xprop xdotool xorg-xwebinfo` for bspwm scratchpad
 
 ### KDE specific stuff ###
