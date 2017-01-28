@@ -29,6 +29,9 @@ call vundle#end()
 " Set powerline font
 let g:airline_powerline_fonts = 1
 
+" remove pause when leaving insert mode
+set ttimeoutlen=10
+
 " Always show statusline
 set laststatus=2
 
