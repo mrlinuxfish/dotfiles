@@ -66,6 +66,10 @@ super + {p,b,comma,period}
 super + {_,shift + }c
 	bspc node -f {next,prev}
 
+# focus the next/previous node on same workspace
+super + {_,shift + }x
+	bspc node -f {next,prev}.local
+
 # focus the next/previous desktop
 super + bracket{left,right}
 	bspc desktop -f {prev,next}
