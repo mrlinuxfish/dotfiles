@@ -8,7 +8,8 @@
 ;=====================================================
 
 [colors]
-background = #7a000000
+background = #000000 
+;#7a000000
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #55
@@ -54,7 +55,7 @@ modules-right = volume memory cpu battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
-tray-transparent = true
+tray-transparent = false
 tray-background = ${root.background}
 
 ;wm-restack = bspwm
