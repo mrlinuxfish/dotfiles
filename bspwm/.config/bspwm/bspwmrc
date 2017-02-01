@@ -11,6 +11,9 @@ setxkbmap -option caps:escape
 # make the 'X' cursor use the regular cursor shape
 xsetroot -cursor_name left_ptr
 
+# Use unclutter to hide the cursor when it is not necessary
+unclutter &
+
 # Start redshift
 redshift &
 
