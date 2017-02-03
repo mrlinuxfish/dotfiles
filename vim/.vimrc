@@ -19,7 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-airline/vim-airline'
 
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 
 Plugin 'tpope/vim-fugitive'
 
