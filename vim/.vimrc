@@ -1,6 +1,13 @@
+" Runtime options {{{1
+
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
+
+" turn off vi compatibility so vim works better
+set nocompatible
+
+" Plugins {{{1
 
 " Set runtime path, include Vundle plugin and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -18,17 +25,28 @@ Plugin 'tpope/vim-fugitive'
 "End Vundle
 call vundle#end()
 
-" set folding method
-set foldmethod=marker
+" Enable filetype detection (technically a plugin)
+filetype on
+filetype indent on " allows for file type indentation
+
+" enable netrw file manager plugin
+filetype plugin on
+
+" Powerline {{{1
 
 " Set powerline font
 let g:airline_powerline_fonts = 1
 
-" remove pause when leaving insert mode
-set ttimeoutlen=10
-
 " Always show statusline
 set laststatus=2
+
+" remove pause when leaving insert mode this resolves issues with airline
+set ttimeoutlen=10
+
+" set folding method
+set foldmethod=marker
+
+" Line settings and colors {{{1
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
@@ -44,25 +62,18 @@ set number
 " turn on syntax highlighting
 syntax on
 
-" set pastebuffer to the + register
-set clipboard=unnamedplus
-
-" turn off vi compatibility so vim works better
-set nocompatible
-
-" enable netrw file manager plugin
-filetype plugin on
+" Search settings {{{1
 
 " Search into subfolders
 set path+=**
 
-" Enable filetype detection
-filetype on
-filetype plugin on
-filetype indent on " allows for file type indentation
-
 " Highlight searches
 set hlsearch
+
+" set pastebuffer to the + register
+set clipboard=unnamedplus
+
+" Tabs / completion {{{1
 
 " Set tab widths
 set tabstop=4
@@ -86,5 +97,3 @@ autocmd Filetype ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=2 autoind
 
 " Set autocomplete for ruby
 autocmd Filetype ruby set omnifunc=syntaxcomplete#Complete
-
-" 
