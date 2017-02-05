@@ -1,5 +1,10 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Export path variables
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Export path to ruby gem files
+if which ruby >/dev/null && which gem >/dev/null; then
+	export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
+fi
 
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
