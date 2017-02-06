@@ -14,7 +14,8 @@ xsetroot -cursor_name left_ptr
 # Use unclutter to hide the cursor when it is not necessary
 unclutter &
 
-# Start redshift
+# Start redshift after making sure it isn't running
+killall -q redshift
 redshift &
 
 # Start whatpulse
