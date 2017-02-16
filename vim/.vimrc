@@ -98,6 +98,9 @@ autocmd Filetype ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=2 autoind
 " Set autocomplete for ruby
 autocmd Filetype ruby set omnifunc=syntaxcomplete#Complete
 
+" Set markdown rules
+autocmd Filetype markdown set wrap
+
 " Paste mode toggle {{{1
 
 " use f5 to toggle paste mode
