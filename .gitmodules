@@ -1,6 +1,9 @@
-[submodule "vim/.vim/bundle/Vundle.vim"]
+[submodule "vundle"]
 	path = vim/.vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
-[submodule "zsh/oh-my-zsh"]
+[submodule "vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
