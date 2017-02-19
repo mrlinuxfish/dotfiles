@@ -3,7 +3,7 @@
 	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "vim-airline"]
 	path = vim/.vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
 [submodule "oh-my-zsh"]
 	path = zsh/.oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
