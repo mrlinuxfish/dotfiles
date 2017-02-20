@@ -9,9 +9,9 @@ Terminal | Termite
 
 ## Table of Contents
 - [Introduction](#using-these-dotfiles)
-- [Automatic Installation](#install.sh)
+- [Automatic Installation](#installsh)
 
-## Using these dotfiles
+## Using these dotfiles ##
 I am using gnu stow to manage my dotfiles
 
 The dotfiles directory should be at ~/dotfiles
