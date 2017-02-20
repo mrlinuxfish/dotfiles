@@ -3,7 +3,11 @@
 sxhkd &
 
 # turn on polybar
-polybar top &
+# polybar top &
+
+# start tint2 and put volume icon in bar
+tint2 &
+volumeicon&
 
 # set caps to escape
 setxkbmap -option caps:escape
