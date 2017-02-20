@@ -1,7 +1,7 @@
 # dotfiles #
 
-OS		| Arch Linux 
 ---------|------
+OS		 | Arch Linux 
 WM		 | BSPWM
 Panel	 | tint2
 Terminal | Termite
