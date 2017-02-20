@@ -1,5 +1,11 @@
 # dotfiles #
 
+OS		| Arch Linux 
+---------|------
+WM		 | BSPWM
+Panel	 | tint2
+Terminal | Termite
+
 ## Using these dotfiles ##
 I am using gnu stow to manage my dotfiles
 
