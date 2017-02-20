@@ -1,6 +1,6 @@
 # dotfiles #
 
-Things I Use	|
+Things I Use	|	
 ---------|------
 OS		 | Arch Linux 
 WM		 | BSPWM
