@@ -9,7 +9,7 @@ Terminal | Termite
 
 ## Table of Contents
 - [Introduction](#using-these-dotfiles)
-- [Automatic Installation](#install)
+- [Automatic Installation](#install.sh)
 
 ## Using these dotfiles
 I am using gnu stow to manage my dotfiles
