@@ -8,8 +8,8 @@ Panel	 | tint2
 Terminal | Termite
 
 ## Table of Contents ##
-[Introduction] (## Using these dotfiles ##)
-[Automatic Installation] (## install.sh ##)
+[Introduction] (#Using-these-dotfiles)
+[Automatic Installation] (#install.sh)
 
 ## Using these dotfiles ##
 I am using gnu stow to manage my dotfiles
