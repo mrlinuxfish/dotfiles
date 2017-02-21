@@ -37,5 +37,5 @@
 
 ### Power management ###
 - Install `tlp ethtool lsb-release smartmontools x86_energy_perf_policy`
-- Disable systemd-rfkill.service (if applicable) `systemctl disable systemd-rfkill.service`
+- Disable systemd-rfkill.service (if applicable) `systemctl mask systemd-rfkill.service`
 - Enable tlp.service and tlp-sleep.service `systemctl enable tlp.service` `systemctl enable lp-sleep.service`
