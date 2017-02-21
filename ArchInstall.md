@@ -1,5 +1,10 @@
 # Arch Install Docs v2 #
 
+## Install Packages ##
+- gvim
+- emacs
+- git
+
 ## Pre-reboot ##
 - Install packages: `base basedevel git htop zsh tmux xorg-server sudo`
 - Configure systemd-boot options
