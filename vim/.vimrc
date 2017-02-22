@@ -62,6 +62,9 @@ set number
 " turn on syntax highlighting
 syntax on
 
+" turn on wildmenu (puts all possible outputs for tab completion above current line)
+set wildmenu
+
 " Search settings {{{1
 
 " Search into subfolders
