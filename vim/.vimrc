@@ -102,7 +102,7 @@ autocmd Filetype ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=2 autoind
 autocmd Filetype ruby set omnifunc=syntaxcomplete#Complete
 
 " Set markdown rules
-autocmd Filetype markdown set wrap
+autocmd Filetype markdown set wrap spell
 
 " Remapings {{{1
 
