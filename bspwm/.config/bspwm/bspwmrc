@@ -37,7 +37,7 @@ dnsmasq &
 # start udiskie to mount devices
 udiskie -a &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor -d Term Irc Docs Media Game Scratch
 
 bspc config border_width         2
 bspc config window_gap          12
