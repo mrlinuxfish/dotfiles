@@ -104,7 +104,13 @@ autocmd Filetype ruby set omnifunc=syntaxcomplete#Complete
 " Set markdown rules
 autocmd Filetype markdown set wrap
 
-" Paste mode toggle {{{1
+" Remapings {{{1
 
-" use f5 to toggle paste mode
-set pastetoggle=<f5>
+" Map <leader> to ","
+let mapleader = ","
+
+" Set  <leader>p to toggle paste mode
+nmap <silent> <leader>p :setlocal paste! paste?<cr>
+
+" Set <leader>s to toggle spell
+map <silent> <leader>s :setlocal spell! spelllang=en_us<cr>
