@@ -114,8 +114,9 @@ nmap <silent> <leader>p :setlocal paste! paste?<cr>
 
 " Set <leader>s to toggle spell
 map <silent> <leader>s :setlocal spell! spelllang=en_us<cr>
-inoremap ss <Esc> ]s
-inoremap SS <Esc> [s
+" Still working on mappings for next in insert mode
+" inoremap <M-s> <Esc>]s
+" inoremap <M-S> <Esc>[s
 
 " Set rempappings for insert mode commands:
 
@@ -126,7 +127,7 @@ inoremap ii <Esc>I
 inoremap aa <Esc>A
 
 " Start editing new line above current
-inoremap oo <Esc>O
+inoremap OO <Esc>O
 
 " undo
 inoremap uu <esc>u
