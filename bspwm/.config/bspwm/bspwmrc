@@ -29,7 +29,7 @@ whatpulse --closedwindow --delaystartup &
 compton -b
 
 # use feh to set background
-feh --bg-fill $HOME/.config/backgrounds/abstract-mosaic-background.png
+feh --bg-fill $HOME/.config/backgrounds/Term.png
 
 # start dnsmasq
 dnsmasq &
@@ -59,4 +59,3 @@ bspc rule -a emacs state=tiled
 # Set rules for steam
 bspc rule -a Steam desktop='^4'
 bspc rule -a Friends desktop='4'
-
