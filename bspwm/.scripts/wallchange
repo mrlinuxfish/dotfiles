@@ -1,0 +1,5 @@
+#!/bin/sh
+
+bspc query -T -d | jshon -e name -u | while read desk; do
+	feh --bg-fill $HOME/.config/backgrounds/$desk.png
+done 
