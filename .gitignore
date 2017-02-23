@@ -2,3 +2,4 @@ backup/
 get_conflicts
 *.swp
 vim/.vim/init.vim
+*.directory
