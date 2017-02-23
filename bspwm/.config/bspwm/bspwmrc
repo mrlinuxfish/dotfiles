@@ -56,6 +56,6 @@ bspc rule -a Whatpulse state=floating
 # bspc rule -a Thunar desktop='^4'
 
 # Set rules for steam
-bspc rule -a Steam desktop='^3'
-bspc rule -a Friends desktop='3'
+bspc rule -a Steam desktop='^4'
+bspc rule -a Friends desktop='4'
 
