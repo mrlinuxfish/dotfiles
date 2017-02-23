@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# This uses feh to set the wallpaper using the name of the workspace
+# wallpapers are stored in .config/backgrounds using the convention: [workspace].png
 bspc query -T -d | jshon -e name -u | while read desk; do
 	feh --bg-fill $HOME/.config/backgrounds/$desk.png
 done 
