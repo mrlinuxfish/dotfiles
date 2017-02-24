@@ -2,12 +2,14 @@
 
 sxhkd &
 
-# turn on polybar
-# polybar top &
+# use feh to set background
+feh --bg-fill $HOME/.config/backgrounds/Term.jpg
 
-# start tint2 and put volume icon in bar
+# Tray settings
+# start tint2, volume controller, and whatpulse
 tint2 &
 volumeicon&
+whatpulse --closedwindow --delaystartup &
 
 # set caps to escape
 setxkbmap -option caps:escape
@@ -22,9 +24,6 @@ unclutter &
 killall -q redshift
 redshift &
 
-# Start whatpulse
-whatpulse --closedwindow --delaystartup &
-
 # start the compton service
 compton -b
 
@@ -34,6 +33,7 @@ dnsmasq &
 # start udiskie to mount devices
 udiskie -a &
 
+# bspwm config
 bspc monitor -d Term Irc Media Game Scratch
 
 bspc config border_width         2
@@ -47,15 +47,9 @@ bspc config click_to_focus       true
 # bspwm colors
 bspc config presel_feedback_color \#4b4b4b
 
-# bspwm window defaults
+# bspwm window rules
 bspc rule -a Screenkey manage=off
 bspc rule -a Whatpulse state=floating
 bspc rule -a emacs state=tiled
-# bspc rule -a Thunar desktop='^4'
-
-# Set rules for steam
 bspc rule -a Steam desktop='^4'
 bspc rule -a Friends desktop='4'
-
-# use feh to set background through background script this must be run after defining workspace names
-wallchange
