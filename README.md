@@ -21,3 +21,6 @@ Note: some directories, such as the pacman directory, cannot be stowed into your
 
 ## install.sh ##
 I am currently working on getting this script to correctly backup files and prompt the user for what package groups to install
+
+## Misc ##
+Rebased on 2/24/2017 to fix formatting on commit messages
