@@ -2,6 +2,52 @@
 
 # This uses feh to set the wallpaper using the name of the workspace
 # wallpapers are stored in .config/backgrounds using the convention: [workspace].jpg
+
+# Ask bspwm the name of the current workspace and set it to $desk
 bspc query -T -d | jshon -e name -u | while read desk; do
+
+	# old feh command
 	feh --bg-fill $HOME/.config/backgrounds/$desk.jpg
+
+	# Attempt to make feh transition smoothly
+#	# Define variables
+#	walldir=~/.config/backgrounds
+#	cachedir=~/.scripts/tmp
+#	cachefile=$cachedir"/wallchange"
+#	new=$walldir/$desk.jpg
+#	old=$(<$cachefile)
+#	temp=$walldir/temp.jpg
+#	transition=$walldir/transition.bg
+#	echo $walldir
+#	echo $cachedir
+#	echo $cachefile
+#	echo $new
+#	echo $old
+#	echo $temp
+#	echo $transition
+#
+#	# copy current wallpaper to temp
+#	cp $old $temp
+#
+#	# Transition temp.jpg to transition.bg
+#	convert $temp -fill black -colorize 50% $transition
+#
+#	# Use feh to display transition image
+#	feh --bg-fill $transition
+#
+#	# copy new wallpaper to temp
+#	cp $new $temp
+#
+#	# Transiton new wallpaper (temp.jpg) to transition.bg
+#	convert $temp -fill black -colorize 50% $transition
+#
+#	# Use feh to display new wallpaper
+#	feh --bg-fill $transition
+#	feh --bg-fill $new
+#
+#	# Keep a file with the name of the current workspace for doing transitions
+#	mkdir -p $cachedir
+#	touch $cachefile
+#	echo $new > $cachefile
+
 done 
