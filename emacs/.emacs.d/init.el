@@ -1,3 +1,5 @@
+;; -*- mode:elisp -*-
+
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/epla/"))
