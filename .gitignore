@@ -1,5 +1,23 @@
 backup/
 get_conflicts
+
+# Vim temp files
 *.swp
 vim/.vim/init.vim
+
+# Dolphin directory settings
 *.directory
+
+# Emacs packages
+/emacs/.emacs.d/.org-id-locations
+/emacs/.emacs.d/ac-comphist.dat
+/emacs/.emacs.d/auto-save-list
+/emacs/.emacs.d/custom.el
+/emacs/.emacs.d/elpa/*
+/emacs/.emacs.d/image-dired/
+/emacs/.emacs.d/oauth2.plstore
+/emacs/.emacs.d/session.*
+/emacs/.emacs.d/tramp
+/emacs/.emacs.d/url/
+/emacs/.emacs.d/var/
+*.elc
