@@ -11,8 +11,14 @@ tint2 &
 volumeicon&
 whatpulse --closedwindow --delaystartup &
 
-# set caps to escape
-setxkbmap -option caps:escape
+# set caps to ctrl and escape if xcape is installed
+if which xcape > /dev/null; then
+	setxkbmap -option caps:ctrl_modifier
+	xcape -e 'Caps_Lock=Escape' -t 100
+fi
+
+# Make pressing both shift keys turn on caps lock
+setxkbmap -option shift:both_capslock_cancel
 
 # make the 'X' cursor use the regular cursor shape
 xsetroot -cursor_name left_ptr
