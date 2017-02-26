@@ -12,6 +12,9 @@ export PATH=$PATH:$HOME/.rvm/bin
 # Add .scripts to path
 export PATH=$PATH:$HOME/.scripts
 
+# Add snaps to path
+export PATH=$PATH:/var/lib/snapd/snap/bin
+
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
 
