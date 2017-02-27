@@ -1,12 +1,38 @@
 ;; -*- mode:elisp -*-
 
-(require 'package)
+;; Setup emacs to connect to archives over https
+(require 'cl)
+(setq tls-checktrust t)
 
-(add-to-list 'package-archives '("org" . "http://orgmode.org/epla/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(setq python (or (executable-find "py.exe")
+                 (executable-find "python")
+                 ))
 
-(setq package-enable-at-startup nil)
+(let ((trustfile
+       (replace-regexp-in-string
+        "\\\\" "/"
+        (replace-regexp-in-string
+         "\n" ""
+         (shell-command-to-string (concat python " -m certifi"))))))
+  (setq tls-program
+        (list
+         (format "gnutls-cli%s --x509cafile %s -p %%p %%h"
+                 (if (eq window-system 'w32) ".exe" "") trustfile)))
+  (setq gnutls-verify-error t)
+  (setq gnutls-trustfiles (list trustfile)))
+
+;; Setup https package repos
+(defvar gnu '("gnu" . "https://elpa.gnu.org/packages/"))
+(defvar melpa '("melpa" . "https://melpa.org/packages/"))
+(defvar melpa-stable '("melpa-stable" . "https://stable.melpa.org/packages/"))
+
+;; Add marmalade to package repos
+(setq package-archives nil)
+(add-to-list 'package-archives melpa-stable t)
+(add-to-list 'package-archives melpa t)
+(add-to-list 'package-archives gnu t)
+
+;; Initialize and refresh archives
 (package-initialize)
 
 ;; Put custom-set-variables in custom.el
