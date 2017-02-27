@@ -8,7 +8,7 @@ vim/.vim/init.vim
 # Dolphin directory settings
 *.directory
 
-# Emacs packages
+# Emacs packages and temp files
 /emacs/.emacs.d/.org-id-locations
 /emacs/.emacs.d/ac-comphist.dat
 /emacs/.emacs.d/auto-save-list
@@ -21,3 +21,4 @@ vim/.vim/init.vim
 /emacs/.emacs.d/url/
 /emacs/.emacs.d/var/
 *.elc
+*~
