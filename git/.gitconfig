@@ -1,0 +1,7 @@
+[user]
+	email = crazylegoguy@gmail.com
+	name = crazylegoguy@gmail.com
+[credential]
+	helper = cache --timeout 3600
+[branch]
+	autosetuprebase = always
