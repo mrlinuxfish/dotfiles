@@ -71,9 +71,9 @@ super + {_,shift + }c
 super + {_,shift + }x
 	bspc node -f {next,prev}.local
 
-# focus the next/previous desktop
-super + bracket{left,right}
-	bspc desktop -f {prev,next}; \
+# focus or send to the next/previous desktop
+super + {_,shift + }bracket{left,right}
+	bspc {desktop -f,node -d} {prev,next}; \
 	wallchange
 
 # focus the last node/desktop
