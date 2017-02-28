@@ -6,6 +6,9 @@ OS		 | Arch Linux
 WM		 | BSPWM
 Panel	 | tint2
 Terminal | Termite
+Text editor | Gnu Emacs / vim
+Redshift |
+Shell	 | zsh
 
 ## Table of Contents ##
 - [Introduction](#using-these-dotfiles)
