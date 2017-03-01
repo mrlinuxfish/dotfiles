@@ -1,70 +1,79 @@
 #!/bin/bash
 
-## The purpose of this script is to backup old dotfiles and install dotfiles from the dotfiles directory ##
+## The purpose of this script is to backup old dotfiles and install 
+## dotfiles from the dotfiles directory ##
+
 ## this script is in progress ##
 
 echo "the script is not finished :("
 
-# Send input to $arg
-arg=$1
-
-# Parse input for build options
-# cli = all command line tool configuration files
-
 ## Backup function to deal with stow issues
-backup ()
-{
-# Define backup directory andd backup file
-backupdir=""$(dirname "$0")"/backup/$backup"
-backupfile=""$(dirname "$0")"/backup/$backup/file-list.old"
-
-echo $backup
-echo $backupdir $backupfile
-
-# make backup directory
-mkdir -p $backupdir
-echo "backup directory made"
-
-# make backup tracking file
-touch $backupfile
-
-# add stow conflict locations to tracking file
-stow -n $backup |& awk '/existing/ {print $NF}' | cat > $backupfile
-
-# copy files to backup (cat command reads the entirety of $backupfile and outputs each line to cp)
-#cp `cat $backupfile` $backupdir
+function backup {
+	
+	# Define backup directory and backup file
+	args=$@
+	backupdir=""$(dirname "$0")"/backup/$args"
+	backupfile=""$(dirname "$0")"/backup/$args/file-list.old"
+	
+	# make backup directory
+	mkdir -p $backupdir
+	
+	# make backup tracking file
+	touch $backupfile
+	
+	# add stow conflict locations to tracking file
+	stow -n $@ |& awk '/existing/ {print $NF}' | cat > $backupfile
+	
+	# copy files to backup (cat command reads the entirety of $backupfile and outputs each line to cp)
+	filename="$backupfile"
+	while read -r line
+	do
+		mv ~/$line $backupdir
+		echo $line
+		echo "backing up:" $line
+	done < "$filename"
 }
 
-while [[ $# -gt 1 ]]
+function stowFiles {
+	stow $@
+}
+
+## Define install groups
+installTools="emacs git vim tmux zsh"
+installDisplay="compton xrandr redshift"
+installKde="kde"
+installBspwm="bspwm compton"
+installGames="osu"
+
+## Get install options from user and run relevant procedures
+
+while getopts bhiu option
 do
-key=$1
+	case "$option" in
 
-case $key in
-    -i|--install)
-    install="$2"
-    shift # past argument
-    ;;
-    -u|--uninstall)
-    uninstall="$2"
-    shift # past argument
-    ;;
-    -h|--help)
-    helper="$2"
-    shift # past argument
-    ;;
-    -u|--uninstall)
-    install="$2"
-    shift # past argument
-    ;;
-    -b|--backup)
-    backup="$2"
-    shift # past argument
-    ;;
-    *)
-            # unknown option
-    ;;
-esac
-shift # past argument or value
+		## Backup
+		# Only backup conflicting files
+		b) echo "backup"
+		
+		;;
+		
+		## Help
+		# Print help information
+		h) echo "help"
+		
+		;;
+
+		## Install
+		# backup and install installation group
+		i) echo "i"
+		
+		;;
+
+		## Uninstall
+		# Un-stow and replace backed up files
+		u) echo "u"
+		
+		;;
+
+	esac
 done
-
-backup $backup
