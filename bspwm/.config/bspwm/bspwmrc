@@ -14,7 +14,7 @@ whatpulse --closedwindow --delaystartup &
 # set caps to ctrl and escape if xcape is installed
 if which xcape > /dev/null; then
 	setxkbmap -option caps:ctrl_modifier
-	xcape -e 'Caps_Lock=Escape' -t 100
+	xcape -e 'Caps_Lock=Escape' -t 200
 fi
 
 # Make pressing both shift keys turn on caps lock
