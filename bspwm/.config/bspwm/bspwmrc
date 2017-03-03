@@ -56,6 +56,7 @@ bspc config presel_feedback_color \#4b4b4b
 # bspwm window rules
 bspc rule -a Screenkey manage=off
 bspc rule -a Whatpulse state=floating
-bspc rule -a emacs state=tiled
+bspc rule -a Emacs state=tiled
 bspc rule -a Steam desktop='^4'
 bspc rule -a Friends desktop='4'
+bspc rule -a Zathura state=tiled
