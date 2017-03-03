@@ -27,12 +27,17 @@
 (use-package org
   :ensure t
   :config
-  (add-hook 'org-mode-hook(lambda () (org-bullets-mode 1))))
-
-(use-package org-mobile-sync
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook(lambda () (org-mobile-sync-mode 1))))
+  ;; Turn on org-bullets-mode as minor mode
+  (add-hook 'org-mode-hook 'org-bullets-mode)
+  ;; Sync mobile org files on open/close of emacs
+  (add-hook 'after-init-hook 'org-mobile-pull)
+  (add-hook 'kill-emacs-hook 'org-mobile-push) 
+  ;; Set locations for mobile org
+  (setq org-directory "~/org")
+  ;; Location of inbox
+  (setq org-mobile-inbox-for-pull "~/org/flagged.org")
+  ;; Location of mobile org
+  (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg"))
 
 (use-package helm
   :ensure t
@@ -50,11 +55,3 @@
 
 ;; Enable transient mark mode
 (transient-mark-mode 1)
-
-;; Mobile org
-;; Set location of Org files
-(setq org-directory "~/org")
-;; Set name of file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/org/flagged.org")
-;; Set dropbox directory
-(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
