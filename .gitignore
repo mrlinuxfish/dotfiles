@@ -23,4 +23,5 @@ vim/.vim/init.vim
 /emacs/.emacs.d/recentf
 *.elc
 *~
-*#*
+\#*\#
+.\#*
