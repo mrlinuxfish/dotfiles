@@ -20,6 +20,7 @@ vim/.vim/init.vim
 /emacs/.emacs.d/tramp
 /emacs/.emacs.d/url/
 /emacs/.emacs.d/var/
+/emacs/.emacs.d/recentf
 *.elc
 *~
 *#*
