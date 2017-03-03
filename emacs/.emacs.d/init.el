@@ -1,39 +1,48 @@
-;; -*- mode:elisp -*-
+(setq inhibit-startup-message t)
 
-;; Setup emacs to connect to archives over https
-(require 'cl)
-(setq tls-checktrust t)
 
-(setq python (or (executable-find "py.exe")
-                 (executable-find "python")
-                 ))
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
 
-(let ((trustfile
-       (replace-regexp-in-string
-        "\\\\" "/"
-        (replace-regexp-in-string
-         "\n" ""
-         (shell-command-to-string (concat python " -m certifi"))))))
-  (setq tls-program
-        (list
-         (format "gnutls-cli%s --x509cafile %s -p %%p %%h"
-                 (if (eq window-system 'w32) ".exe" "") trustfile)))
-  (setq gnutls-verify-error t)
-  (setq gnutls-trustfiles (list trustfile)))
-
-;; Setup https package repos
-(defvar gnu '("gnu" . "https://elpa.gnu.org/packages/"))
-(defvar melpa '("melpa" . "https://melpa.org/packages/"))
-(defvar melpa-stable '("melpa-stable" . "https://stable.melpa.org/packages/"))
-
-;; Add marmalade to package repos
-(setq package-archives nil)
-(add-to-list 'package-archives melpa-stable t)
-(add-to-list 'package-archives melpa t)
-(add-to-list 'package-archives gnu t)
-
-;; Initialize and refresh archives
 (package-initialize)
+
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(use-package try
+  :ensure t)
+
+(use-package which-key
+  :ensure t 
+  :config
+  (which-key-mode))
+
+(use-package org-bullets
+  :ensure t)
+
+(use-package org
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook(lambda () (org-bullets-mode 1))))
+
+(use-package org-mobile-sync
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook(lambda () (org-mobile-sync-mode 1))))
+
+(use-package helm
+  :ensure t
+  :bind (("M-x" . helm-M-x)
+	 ("M-<f5>" . helm-find-files)
+	 ([f10] . helm-buffers-list)
+	 ([S-f10] . helm-recentf)))
+
+(use-package markdown-mode
+  :ensure t)
 
 ;; Put custom-set-variables in custom.el
 (setq custom-file "~/.emacs.d/custom.el")
@@ -41,10 +50,6 @@
 
 ;; Enable transient mark mode
 (transient-mark-mode 1)
-
-;;;;org-mode configuration
-;; Enable org-mode
-(require 'org)
 
 ;; Mobile org
 ;; Set location of Org files
