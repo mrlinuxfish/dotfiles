@@ -6,10 +6,11 @@ sxhkd &
 feh --bg-fill $HOME/.config/backgrounds/Term.jpg
 
 # Tray settings
-# start tint2, volume controller, and whatpulse
+# start tint2, volume controller, dropbox, and whatpulse
 tint2 &
 volumeicon&
 whatpulse --closedwindow --delaystartup &
+/usr/bin/dropbox &
 
 # set caps to ctrl and escape if xcape is installed
 if which xcape > /dev/null; then
