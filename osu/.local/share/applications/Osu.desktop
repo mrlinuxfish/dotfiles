@@ -4,7 +4,7 @@ Comment=
 Exec=WINEPREFIX=~/.osu wine ~/osu\\!/osu\\!.exe\n
 GenericName[en_US]=Rhythm Game
 GenericName=Rhythm Game
-Icon=~/.osu/Logo.png
+Icon=$HOME/.osu/Logo.png
 MimeType=
 Name[en_US]=Osu!
 Name=Osu!

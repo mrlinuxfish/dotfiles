@@ -2,7 +2,7 @@
 Comment[en_US]=
 Exec=/home/atomsk/.scripts/osuhandler.sh %u
 GenericName[en_US]=Osu URI Handler
-Icon=~/.osu/Logo.png
+Icon=$HOME/.osu/Logo.png
 MimeType=
 Name[en_US]=Osu! URI Handler
 Name=Osu!
