@@ -34,9 +34,6 @@ redshift &
 # start the compton service
 compton -b
 
-# start dnsmasq
-dnsmasq &
-
 # start udiskie to mount devices
 udiskie -a &
 
