@@ -40,11 +40,11 @@
   (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg"))
 
 (use-package helm
-  :ensure t
-  :bind (("M-x" . helm-M-x)
-	 ("M-<f5>" . helm-find-files)
-	 ([f10] . helm-buffers-list)
-	 ([S-f10] . helm-recentf)))
+  :ensure t)
+;  :bind (("M-x" . helm-M-x)
+;	 ("M-<f5>" . helm-find-files)
+;	 ([f10] . helm-buffers-list)
+;	 ([S-f10] . helm-recentf)))
 
 (use-package markdown-mode
   :ensure t)
@@ -55,3 +55,8 @@
 
 ;; Enable transient mark mode
 (transient-mark-mode 1)
+
+;; Enable ido mode
+(setq indo-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
