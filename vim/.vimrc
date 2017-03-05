@@ -104,6 +104,8 @@ autocmd Filetype ruby set omnifunc=syntaxcomplete#Complete
 " Set markdown rules
 autocmd Filetype markdown set wrap spell
 
+" Set git commit rules
+autocmd Filetype gitcommit set spell
 " Remapings {{{1
 
 " Map <leader> to ","
