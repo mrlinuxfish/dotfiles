@@ -14,8 +14,8 @@ then
 	mv $finalfile $finalfile.old
 fi
 
-# Set output path to /tmp/[filename]
-outputdir=/tmp/$( echo $file |awk '{gsub(/\/.*\//,"",$1); print}' )
+# Set output path to ~/tmp/[filename]
+outputdir=~/tmp/$( echo $file |awk '{gsub(/\/.*\//,"",$1); print}' )
 mkdir -p $outputdir
 # Make filelist
 list=$outputdir/list.txt
