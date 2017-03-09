@@ -6,7 +6,7 @@ file=$1
 # Set finalized file directory and file
 finaldir=~/blender/export
 mkdir -p $finaldir
-finalfile=$finaldir/$(echo $1 |awk -F/ '{print $(NF)}' | awk -F. '{print $1}').avi
+finalfile=$finaldir/$(echo $file |awk -F/ '{print $(NF)}' | awk -F. '{print $1}').avi
 
 # Backup old export file
 if [ -e $finalfile ]
@@ -24,8 +24,11 @@ touch $list
 # Set number of threads
 threads=4
 
+queryFramesScript=~/.scripts/blender/queryFrames.py
+echo $queryFramesScript
+
 # Query frame number
-framequery=$(blender -b ~/blender/adam-nov-16.blend -P ./blender/queryFrames.py 2>/dev/null)
+framequery=$(blender -b $file -P $queryFramesScript 2>/dev/null)
 
 # Set frames to number from framequery
 frames=$(echo $framequery |awk -F: '{print $1}')
@@ -68,4 +71,4 @@ echo "Blend Complete"
 
 # Stich the output together
 echo "Stiching avi..."
-ffmpeg -f concat -safe 0 -i /tmp/adam-nov-16.blend/list.txt -c copy $finalfile
+ffmpeg -f concat -safe 0 -i $list -c copy $finalfile
