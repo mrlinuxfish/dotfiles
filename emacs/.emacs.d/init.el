@@ -1,6 +1,4 @@
-(setq inhibit-startup-message t)
-
-
+;; Initialize package archives
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
@@ -60,3 +58,9 @@
 (setq indo-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
+
+;; Disable annoying 'bell' function.
+(setq ring-bell-function 'ignore)
+
+;; Disable startup screen
+(setq inhibit-startup-message t)
