@@ -1,0 +1,71 @@
+#!/bin/sh
+
+# Set file to render
+file=$1
+
+# Set finalized file directory and file
+finaldir=~/blender/export
+mkdir -p $finaldir
+finalfile=$finaldir/$(echo $1 |awk -F/ '{print $(NF)}' | awk -F. '{print $1}').avi
+
+# Backup old export file
+if [ -e $finalfile ]
+then
+	mv $finalfile $finalfile.old
+fi
+
+# Set output path to /tmp/[filename]
+outputdir=/tmp/$( echo $file |awk '{gsub(/\/.*\//,"",$1); print}' )
+mkdir -p $outputdir
+# Make filelist
+list=$outputdir/list.txt
+touch $list
+
+# Set number of threads
+threads=4
+
+# Query frame number
+framequery=$(blender -b ~/blender/adam-nov-16.blend -P ./blender/queryFrames.py 2>/dev/null)
+
+# Set frames to number from framequery
+frames=$(echo $framequery |awk -F: '{print $1}')
+# Echo number of frames
+echo "$frames frames"
+
+# Set split ratio
+split=$((frames/threads))
+# Begin on frame 0
+framestart=0
+
+# Start simultaneous blends
+while [ $threads -gt 0 ]
+do
+	# Split frames and set framerange
+	frameend=$((framestart + split))
+	framerange="-s $framestart -e $frameend"
+	
+	# Set output file and echo file names to $list
+	output=$outputdir/$threads.avi
+	echo file "'"$output"'" >> $list
+
+	# Start all processes in paralell
+	# Output files are in the format thread[$thread}/avi
+	echo "started render on $framerange"
+	blender -b $file $framerange -o $output -a & pid=$!
+	PID_LIST+=" $pid"
+
+	# Set correct new start frame
+	framestart=$(( $frameend + 1))
+	# Iterate loop
+	threads=$(( $threads - 1 ))
+done
+
+# Process paralel execution of blend
+trap "kill $PID_LIST" SIGINT
+wait $PID_LIST
+echo
+echo "Blend Complete"
+
+# Stich the output together
+echo "Stiching avi..."
+ffmpeg -f concat -safe 0 -i /tmp/adam-nov-16.blend/list.txt -c copy $finalfile
