@@ -6,5 +6,5 @@ startx
 fi
 
 ## add ability for using bspwm panel
-export PANEL_FIFO=/tmp/panel-fifo
+# export PANEL_FIFO=/tmp/panel-fifo
 
