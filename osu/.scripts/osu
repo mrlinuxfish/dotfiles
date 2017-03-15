@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Execute osu with correct wine prefix
-WINEPREFIX=~/.osu wine ~/Osu\!/osu\!.exe
+WINEPREFIX=~/.osu wine ~/osu\!/osu\!.exe
