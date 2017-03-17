@@ -25,6 +25,9 @@
 (use-package org
   :ensure t
   :config
+  ;; Use flyspell in org mode
+  (add-hook 'org-mode-hook 'flyspell-mode)
+  (add-hook 'org-mode-hook 'flyspell-buffer)
   ;; Turn on org-bullets-mode as minor mode
   (add-hook 'org-mode-hook 'org-bullets-mode)
   ;; Sync mobile org files on open/close of emacs
@@ -45,7 +48,10 @@
 ;	 ([S-f10] . helm-recentf)))
 
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'markdown-mode-hook 'flyspell-mode)
+  (add-hook 'markdown-mode-hook 'flyspell-buffer))
 
 ;; Put custom-set-variables in custom.el
 (setq custom-file "~/.emacs.d/custom.el")
