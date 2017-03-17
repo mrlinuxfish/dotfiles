@@ -47,7 +47,7 @@ installGames="osu"
 
 ## Get install options from user and run relevant procedures
 
-while getopts bhiu option
+while getopts b:hi:u: option
 do
 	case "$option" in
 
