@@ -21,7 +21,7 @@ vim/.vim/init.vim
 /emacs/.emacs.d/url/
 /emacs/.emacs.d/var/
 /emacs/.emacs.d/recentf
-/emacs/.emacs.d/ido*
+/emacs/.emacs.d/ido.*
 /emacs/.emacs.d/eshell/*
 *.elc
 *~
