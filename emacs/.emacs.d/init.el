@@ -64,3 +64,17 @@
 
 ;; Disable startup screen
 (setq inhibit-startup-message t)
+
+;; Set C-RET to insert new line and indent
+(global-set-key (kbd "<C-return>") (lambda ()
+                   (interactive)
+                   (end-of-line)
+                   (newline-and-indent)))
+
+;; Set C-S-RET to insert new line above and indent
+(global-set-key (kbd "<C-S-return>") (lambda ()
+                       (interactive)
+                       (previous-line)
+		       (end-of-line)
+                       (newline-and-indent)))
+
