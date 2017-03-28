@@ -15,9 +15,23 @@
   :ensure t)
 
 (use-package which-key
-  :ensure t 
+  :ensure t)
+
+(use-package auto-complete
+  :ensure t
   :config
-  (which-key-mode))
+  (global-auto-complete-mode t))
+
+(use-package popup-complete
+  :ensure t)
+
+(use-package flyspell
+  :ensure t)
+
+(use-package flyspell-popup
+  :ensure t
+  :config
+  (define-key flyspell-mode-map (kbd"C-;") #'flyspell-popup-correct))
 
 (use-package org-bullets
   :ensure t)
@@ -40,36 +54,53 @@
   ;; Location of mobile org
   (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg"))
 
-(use-package helm
-  :ensure t)
-;  :bind (("M-x" . helm-M-x)
-;	 ("M-<f5>" . helm-find-files)
-;	 ([f10] . helm-buffers-list)
-;	 ([S-f10] . helm-recentf)))
-
 (use-package markdown-mode
   :ensure t
   :config
   (add-hook 'markdown-mode-hook 'flyspell-mode)
   (add-hook 'markdown-mode-hook 'flyspell-buffer))
 
+(use-package autopair
+  :ensure t
+  :config
+  (autopair-global-mode t))
+
+(use-package highlight-parentheses
+  :ensure t
+  :config
+  (define-globalized-minor-mode global-highlight-parentheses-mode
+    highlight-parentheses-mode
+    (lambda ()
+      (highlight-parentheses-mode t)))
+  (global-highlight-parentheses-mode t))
+
+(use-package moe-theme
+  :ensure t
+  :config
+  (moe-dark))
+
 ;; Put custom-set-variables in custom.el
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
 ;; Enable transient mark mode
-(transient-mark-mode 1)
+(transient-mark-mode t)
 
 ;; Enable ido mode
 (setq indo-enable-flex-matching t)
 (setq ido-everywhere t)
-(ido-mode 1)
+(ido-mode t)
 
 ;; Disable annoying 'bell' function.
 (setq ring-bell-function 'ignore)
 
 ;; Disable startup screen
 (setq inhibit-startup-message t)
+
+;; Disable unnecessary ui elements
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; Set C-RET to insert new line and indent
 (global-set-key (kbd "<C-return>") (lambda ()
@@ -83,4 +114,3 @@
                        (previous-line)
 		       (end-of-line)
                        (newline-and-indent)))
-
