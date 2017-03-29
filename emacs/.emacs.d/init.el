@@ -77,7 +77,13 @@
 (use-package moe-theme
   :ensure t
   :config
-  (moe-dark))
+  (moe-dark)
+  (moe-theme-set-color 'green))
+
+(use-package magit
+  :ensure t
+  :config
+  (global-set-key (kbd "C-x g") 'magit-status))
 
 ;; Put custom-set-variables in custom.el
 (setq custom-file "~/.emacs.d/custom.el")
