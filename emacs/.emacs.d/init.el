@@ -46,7 +46,7 @@
   (add-hook 'org-mode-hook 'org-bullets-mode)
   ;; Sync mobile org files on open/close of emacs
   (add-hook 'after-init-hook 'org-mobile-pull)
-  (add-hook 'kill-emacs-hook 'org-mobile-push) 
+  (add-hook 'kill-emacs-hook 'org-mobile-push)
   ;; Set locations for mobile org
   (setq org-directory "~/org")
   ;; Location of inbox
@@ -87,6 +87,21 @@
   (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
   (global-magit-file-mode t))
 
+(use-package flycheck
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
+
+(use-package flycheck-ledger
+  :ensure t
+  :config
+  (eval-after-load 'flycheck '(require 'flycheck-ledger)))
+
+(use-package ledger-mode
+  :ensure t
+  :init
+  (setq ledger-clear-whole-transactions 1))
+
 ;; Put custom-set-variables in custom.el
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
@@ -119,6 +134,6 @@
 ;; Set C-S-RET to insert new line above and indent
 (global-set-key (kbd "<C-S-return>") (lambda ()
                        (interactive)
-                       (previous-line)
+                       (forward-line -1)
 		       (end-of-line)
                        (newline-and-indent)))
