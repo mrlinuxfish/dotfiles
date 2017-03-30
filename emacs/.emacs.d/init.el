@@ -1,3 +1,5 @@
+					; -*- elisp -*-
+
 ;; Initialize package archives
 (require 'package)
 (setq package-enable-at-startup nil)
