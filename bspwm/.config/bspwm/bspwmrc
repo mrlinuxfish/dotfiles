@@ -58,3 +58,4 @@ bspc rule -a Emacs state=tiled
 bspc rule -a Steam desktop='^4'
 bspc rule -a Friends desktop='4'
 bspc rule -a Zathura state=tiled
+bspc rule -a Discord desktop='^2'
