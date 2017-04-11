@@ -54,7 +54,9 @@
   ;; Location of inbox
   (setq org-mobile-inbox-for-pull "~/org/flagged.org")
   ;; Location of mobile org
-  (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg"))
+  (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+  ;; Fontify code in code blocks (syntax highlighting)
+  (setq org-src-fontify-natively t))
 
 (use-package markdown-mode
   :ensure t
