@@ -10,9 +10,18 @@ echo "whatpulse is up"
 sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam -silent' &
 echo "steam is up"
 
-#Redshift
+# Redshift
 redshift &
 echo "redshift started"
+
+# Discord
+/opt/discord-canary/DiscordCanary &
+
+# Dropbox
+dropbox &
+
+# Easystroke (gesture recognition)
+/usr/bin/easystroke
 
 # Razer Naga keyboard definitions
 # bind naga keys so they will not produce multiple keystrokes (using F15 seems to be effective, but could have adverse side effects)
