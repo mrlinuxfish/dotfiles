@@ -21,7 +21,7 @@ echo "redshift started"
 dropbox &
 
 # Easystroke (gesture recognition)
-/usr/bin/easystroke
+/usr/bin/easystroke &
 
 # Razer Naga keyboard definitions
 # bind naga keys so they will not produce multiple keystrokes (using F15 seems to be effective, but could have adverse side effects)
