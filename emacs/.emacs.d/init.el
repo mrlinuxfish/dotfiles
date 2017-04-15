@@ -56,7 +56,10 @@
   ;; Location of mobile org
   (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
   ;; Fontify code in code blocks (syntax highlighting)
-  (setq org-src-fontify-natively t))
+  (setq org-src-fontify-natively t
+	org-src-tab-acts-natively t
+	org-confirm-babel-evaluate nil
+	org-edit-src-content-indentation 0))
 
 (use-package markdown-mode
   :ensure t
@@ -106,9 +109,8 @@
   :init
   (setq ledger-clear-whole-transactions 1))
 
-;; Put custom-set-variables in custom.el
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+;; Put custom-set-variables in a temp file
+(setq custom-file (make-temp-file ""))
 
 ;; Enable transient mark mode
 (transient-mark-mode t)
@@ -121,6 +123,9 @@
 ;; Disable annoying 'bell' function.
 (setq ring-bell-function 'ignore)
 
+;; Turn off double space for sentences
+(setq sentence-end-double-space nil)
+
 ;; Disable startup screen
 (setq inhibit-startup-message t)
 
@@ -128,6 +133,9 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+
+;; Use y and n inseted of yes and no
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Set C-RET to insert new line and indent
 (global-set-key (kbd "<C-return>") (lambda ()
