@@ -1,0 +1,3 @@
+(define-abbrev-table 'global-abbrev-table'(
+    ("aeq" "α" nil 1)
+    ))
