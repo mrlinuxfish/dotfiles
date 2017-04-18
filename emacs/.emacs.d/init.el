@@ -112,6 +112,13 @@
 ;; Put custom-set-variables in a temp file
 (setq custom-file (make-temp-file ""))
 
+;; Set Abbrev file
+(setq abbrev-file-name
+      "~/.emacs.d/abbrev_defs")
+(if (file-exists-p abbrev-file-name)
+    (quietly-read-abbrev-file))
+(setq-default abbrev-mode t)
+
 ;; Enable transient mark mode
 (transient-mark-mode t)
 
