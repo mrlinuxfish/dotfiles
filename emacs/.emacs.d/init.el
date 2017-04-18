@@ -1,5 +1,6 @@
-					; -*- elisp -*-
-
+;;; package --- sumary
+;;; Commentary:
+;;; Code:
 ;; Initialize package archives
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -166,3 +167,4 @@
                        (forward-line -1)
 		       (end-of-line)
                        (newline-and-indent)))
+;;; init.el ends here
