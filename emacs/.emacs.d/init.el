@@ -119,6 +119,16 @@
     (quietly-read-abbrev-file))
 (setq-default abbrev-mode t)
 
+;; Beautify lambda symbol
+(defun my-pretty-lambda ()
+  "Make lambda use unicode symbol for lambda in Lisp."
+  (setq prettify-symbols-alist
+	'(
+	  ("lambda" . 995) ; λ
+	  )))
+(add-hook 'elisp-mode-hook 'my-pretty-lambda)
+(global-prettify-symbols-mode 1)
+
 ;; Enable transient mark mode
 (transient-mark-mode t)
 
