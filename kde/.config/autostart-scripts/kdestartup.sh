@@ -23,6 +23,10 @@ dropbox &
 # Easystroke (gesture recognition)
 /usr/bin/easystroke &
 
+# Naga daemon (keymapper)
+naga &
+echo "naga started"
+
 # Razer Naga keyboard definitions
 # bind naga keys so they will not produce multiple keystrokes (using F15 seems to be effective, but could have adverse side effects)
 remote_id=$(
@@ -55,10 +59,6 @@ EOF
 setxkbmap -device $remote_id -print | sed 's/\(xkb_symbols.*\)"/\1+custom(remote)"/' | xkbcomp -I/tmp/xkb -i $remote_id -synch - $DISPLAY 2>/dev/null &
 
 echo "naga keys defined"
-
-# Naga daemon (keymapper)
-naga &
-echo "naga started"
 
 # Remove shadows
 # Wait 10 seconds so the taskbar is drawn first
