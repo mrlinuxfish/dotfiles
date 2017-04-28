@@ -65,7 +65,7 @@ super + {p,b,comma,period}
 # focus the next/previous node
 super + {_,shift + }c
 	bspc node -f {next,prev}; \
-	wallchange
+	# wallchange
 
 # focus the next/previous node on same workspace
 super + {_,shift + }x
@@ -74,24 +74,24 @@ super + {_,shift + }x
 # focus or send to the next/previous desktop
 super + {_,shift + }bracket{left,right}
 	bspc {desktop -f,node -d} {prev,next}; \
-	wallchange
+	# wallchange
 
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last; \
-	wallchange
+	# wallchange
 
 # focus the older or newer node in the focus history
 super + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on; \
-	wallchange
+	# wallchange
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'; \
-	wallchange
+	# wallchange
 
 # end move/resize
 super + @button{1-3}
@@ -135,7 +135,7 @@ super + {Left,Down,Up,Right}
 
 # change wallpaper (testing)
 super + a
-	wallchange
+	# wallchange
 
 # scratchpad
 #super + e
