@@ -14,6 +14,11 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(use-package async
+  :ensure t
+  :config
+  (async-bytecomp-package-mode 1))
+
 (use-package try
   :ensure t)
 
@@ -112,12 +117,17 @@
 
 (use-package multiple-cursors
   :ensure t
-  :init
+  :config
   (require 'multiple-cursors)
   (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
+
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode 1))
 
 ;; Put custom-set-variables in a temp file
 (setq custom-file (make-temp-file ""))
