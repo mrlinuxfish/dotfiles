@@ -77,6 +77,7 @@
   :ensure t
   :config
   (autopair-global-mode t))
+;; Possibly change to smartparens and paredit
 
 (use-package highlight-parentheses
   :ensure t
@@ -128,6 +129,9 @@
   :ensure t
   :config
   (yas-global-mode 1))
+
+(use-package pkg-info
+  :ensure t)
 
 ;; Put custom-set-variables in a temp file
 (setq custom-file (make-temp-file ""))
