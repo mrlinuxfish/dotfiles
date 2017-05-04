@@ -73,11 +73,11 @@
   (add-hook 'markdown-mode-hook 'flyspell-mode)
   (add-hook 'markdown-mode-hook 'flyspell-buffer))
 
-(use-package autopair
+(use-package smartparens
   :ensure t
   :config
-  (autopair-global-mode t))
-;; Possibly change to smartparens and paredit
+  (require 'smartparens-config)
+  (smartparens-global-strict-mode t))
 
 (use-package highlight-parentheses
   :ensure t
