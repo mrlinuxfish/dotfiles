@@ -19,12 +19,6 @@
   :config
   (async-bytecomp-package-mode 1))
 
-(use-package try
-  :ensure t)
-
-(use-package which-key
-  :ensure t)
-
 (use-package auto-complete
   :ensure t
   :config
