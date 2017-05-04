@@ -19,6 +19,12 @@
   :config
   (async-bytecomp-package-mode 1))
 
+(use-package moe-theme
+  :ensure t
+  :config
+  (moe-dark)
+  (moe-theme-set-color 'green))
+
 (use-package auto-complete
   :ensure t
   :config
@@ -81,12 +87,6 @@
     (lambda ()
       (highlight-parentheses-mode t)))
   (global-highlight-parentheses-mode t))
-
-(use-package moe-theme
-  :ensure t
-  :config
-  (moe-dark)
-  (moe-theme-set-color 'green))
 
 (use-package magit
   :ensure t
