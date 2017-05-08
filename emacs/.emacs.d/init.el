@@ -87,6 +87,7 @@
     (lambda ()
       (highlight-parentheses-mode t)))
   (global-highlight-parentheses-mode t))
+;; Might switch to rainbow-delimiters as color is customizable
 
 (use-package magit
   :ensure t
@@ -127,6 +128,35 @@
 (use-package pkg-info
   :ensure t)
 
+(use-package expand-region
+  :ensure t
+  :config
+  (require 'expand-region)
+  (global-set-key (kbd "C-=") 'er/expand-region)
+  (global-set-key (kbd "C-+") 'er/contract-region))
+
+(use-package anzu
+  :ensure t
+  :config
+  (global-anzu-mode +1))
+
+(use-package move-text
+  :ensure t
+  :config
+  (require 'move-text)
+  (move-text-default-bindings))
+
+(use-package flx-ido
+  :ensure t
+  :config
+  (require 'flx-ido)
+  (ido-mode 1)
+  (ido-everywhere 1)
+  (flx-ido-mode 1)
+  ;; disable ido faces to see flx highlights.
+  (setq ido-enable-flex-matching t)
+  (setq ido-use-faces nil))
+
 ;; Make emacs slightly transparent '(<active> . <inactive>)
 (set-frame-parameter (selected-frame) 'alpha '(95 . 75))
 (add-to-list 'default-frame-alist '(alpha . (95 . 75)))
@@ -155,9 +185,9 @@
 (transient-mark-mode t)
 
 ;; Enable ido mode
-(setq indo-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode t)
+;; (setq indo-enable-flex-matching t)
+;; (setq ido-everywhere t)
+;; (ido-mode t)
 
 ;; Disable annoying 'bell' function.
 (setq ring-bell-function 'ignore)
