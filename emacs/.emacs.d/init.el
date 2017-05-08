@@ -127,6 +127,10 @@
 (use-package pkg-info
   :ensure t)
 
+;; Make emacs slightly transparent '(<active> . <inactive>)
+(set-frame-parameter (selected-frame) 'alpha '(95 . 75))
+(add-to-list 'default-frame-alist '(alpha . (95 . 75)))
+
 ;; Put custom-set-variables in a temp file
 (setq custom-file (make-temp-file ""))
 
