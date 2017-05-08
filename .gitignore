@@ -23,6 +23,7 @@ vim/.vim/init.vim
 /emacs/.emacs.d/recentf
 /emacs/.emacs.d/ido.*
 /emacs/.emacs.d/eshell/*
+/emacs/.emacs.d/.mc-lists.el
 *.elc
 *~
 \#*\#
