@@ -2,6 +2,53 @@
 CurrentProfileEntry=-1
 ProfileRotationList=
 
+[Wacom Bamboo Pen & Touch][1080p][eraser]
+Area=952 652 9218 5685
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+ScreenMap=desktop:952 652 9218 5685
+ScreenSpace=desktop
+Suppress=2
+Threshold=27
+
+[Wacom Bamboo Pen & Touch][1080p][pad]
+Button1=0
+Button2=0
+Button3=0
+Button4=0
+
+[Wacom Bamboo Pen & Touch][1080p][stylus]
+Area=952 652 9218 5685
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+ScreenMap=desktop:952 652 9218 5685
+ScreenSpace=desktop
+Suppress=2
+TabletPcButton=off
+Threshold=27
+
+[Wacom Bamboo Pen & Touch][1080p][touch]
+Area=0 0 0 0
+Gesture=off
+InvertScroll=off
+Mode=relative
+Rotate=auto
+ScreenSpace=desktop
+ScrollDistance=0
+TapTime=0
+Touch=off
+ZoomDistance=0
+
 [Wacom Bamboo Pen & Touch][Default][eraser]
 Area=0 436 11255 6364
 Button1=1
