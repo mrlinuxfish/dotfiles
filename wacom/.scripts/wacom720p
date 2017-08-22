@@ -4,5 +4,5 @@
 PEN=$(xsetwacom --list devices| grep STYLUS| awk -F: '{print $2}'| awk -F' ' '{print $1}')
 
 # Set the usable area and turn off touch
-xsetwacom --set $PEN area 2330 1490 7840 4845
+xsetwacom --set $PEN area 2730 1890 7440 4445 
 xsetwacom --set $PEN touch off
