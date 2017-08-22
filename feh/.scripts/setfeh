@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# SetFeh
+# The purpose of this script is to easily change the wallpaper set by feh in various window managers
+
+# Grab specified file to $file
+file=$1
+
+# Set wallpaper to specified file and copy to directory for reuse
+feh --bg-fill "$file"
+cp "$file" ~/.config/wall.png
