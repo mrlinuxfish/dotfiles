@@ -1,0 +1,163 @@
+# i3 Gaps Config File
+
+# Auto start scripts
+exec feh --bg-fill ~/.config/wall.png & # Set background
+exec /usr/bin/dropbox & # Start dropbox
+exec setxkbmap -option caps:escape # Set keymap options
+exec setxkbmap -option shift:both_capslock_cancel
+exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
+exec unclutter & # Make cursor disappear when not needed
+exec killall -q redshift # Start redshift
+exec redshift &
+exec compton -b # Start compositor
+exec udiskie -a & # Start disk manager
+exec volumeicon & # Start volume icon service
+
+# Basic Definitions
+#i3 gaps definitions
+hide_edge_borders both
+for_window [class="^.*"] border pixel 0
+gaps inner 15
+gaps outer 5
+set $mod Mod4
+set $term termite
+set $browser firefox
+font pango:monospace 10
+focus_follows_mouse no
+
+# Dropdown/Scratchpad Windows
+# Define dropdown window which will be bound later
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] move position center
+for_window [instance="dropdown"] move scratchpad
+exec --no-startup-id $term -name dropdown
+
+## Basic key bindings ##
+floating_modifier $mod
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+bindsym $mod+t split toggle
+bindsym $mod+Escape exec dmenu_run
+bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
+bindsym $mod+z gaps outer current plus 5
+bindsym $mod+Shift+z gaps outer current minus 5
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+
+# Movement
+bindsym $mod+j focus left
+bindsym $mod+Shift+j move left
+bindsym $mod+k focus down
+bindsym $mod+Shift+k move down
+bindsym $mod+l focus up
+bindsym $mod+Shift+l move up
+bindsym $mod+semicolon focus right
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Shift+Left move left
+bindsym $mod+Down focus down
+bindsym $mod+Shift+Down move down
+bindsym $mod+Up focus up
+bindsym $mod+Shift+Up move up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Right move right
+
+# Set workspace names
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1	move container to workspace $ws1
+bindsym $mod+Shift+2	move container to workspace $ws2
+bindsym $mod+Shift+3	move container to workspace $ws3
+bindsym $mod+Shift+4	move container to workspace $ws4
+bindsym $mod+Shift+5	move container to workspace $ws5
+bindsym $mod+Shift+6	move container to workspace $ws6
+bindsym $mod+Shift+7	move container to workspace $ws7
+bindsym $mod+Shift+8	move container to workspace $ws8
+bindsym $mod+Shift+9	move container to workspace $ws9
+bindsym $mod+Shift+0	move container to workspace $ws10
+
+# Default windo locations
+for_window [class="Blender"] move to workspace $ws6
+for_window [title="GIMP Startup"] move workspace $ws5
+for_window [class="Gimp"] move workspace $ws5
+for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
+for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
+for_window [window_role="tr-main"] move to workspace $ws8
+
+workspace $ws6 gaps inner 0
+workspace $ws6 gaps outer 0
+workspace $ws5 gaps inner 0
+workspace $ws5 gaps outer 0
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3status
+	position top
+}
