@@ -16,8 +16,8 @@ exec volumeicon & # Start volume icon service
 # Basic Definitions
 hide_edge_borders both
 for_window [class="^.*"] border pixel 0
-gaps inner 15 # i3 gaps borders
-gaps outer 5
+#gaps inner 15 # i3 gaps borders
+#gaps outer 5
 set $mod Mod4
 set $term termite
 set $browser firefox
@@ -39,8 +39,8 @@ bindsym $mod+q kill
 bindsym $mod+t split toggle
 bindsym $mod+Escape exec dmenu_run
 bindsym $mod+u [instance="dropdown"] scratchpad show, move position center
-bindsym $mod+z gaps outer current plus 5
-bindsym $mod+Shift+z gaps outer current minus 5
+#bindsym $mod+z gaps outer current plus 5
+#bindsym $mod+Shift+z gaps outer current minus 5
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
@@ -50,7 +50,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+n $browser
+bindsym $mod+n exec $browser
 
 # Movement
 bindsym $mod+j focus left
@@ -109,17 +109,20 @@ bindsym $mod+Shift+9	move container to workspace $ws9
 bindsym $mod+Shift+0	move container to workspace $ws10
 
 # Default window locations
-for_window [class="Blender"] move to workspace $ws6
+for_window [class="Blender"] move workspace $ws6
 for_window [title="GIMP Startup"] move workspace $ws5
 for_window [class="Gimp"] move workspace $ws5
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
 for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 for_window [window_role="tr-main"] move to workspace $ws8
+for_window [class="Emacs"] move workspace $ws2
 
-workspace $ws6 gaps inner 0
-workspace $ws6 gaps outer 0
-workspace $ws5 gaps inner 0
-workspace $ws5 gaps outer 0
+#workspace $ws6 gaps inner 0
+#workspace $ws6 gaps outer 0
+#workspace $ws5 gaps inner 0
+#workspace $ws5 gaps outer 0
+#workspace $ws2 gaps inner 0
+#workspace $ws2 gaps outer 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
