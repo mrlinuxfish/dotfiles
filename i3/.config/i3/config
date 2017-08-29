@@ -3,8 +3,6 @@
 # Auto start scripts
 exec feh --bg-fill ~/.config/wall.png & # Set background
 exec /usr/bin/dropbox & # Start dropbox
-exec setxkbmap -option caps:escape # Set keymap options
-exec setxkbmap -option shift:both_capslock_cancel
 exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
 exec unclutter & # Make cursor disappear when not needed
 exec killall -q redshift # Start redshift
@@ -12,12 +10,13 @@ exec redshift &
 exec compton -b # Start compositor
 exec udiskie -a & # Start disk manager
 exec volumeicon & # Start volume icon service
+exec setxkbmap -option caps:escape # Set keymap options
+exec setxkbmap -option shift:both_capslock_cancel
+exec emacs # Make sure emacs is running after startup
 
 # Basic Definitions
 hide_edge_borders both
 for_window [class="^.*"] border pixel 0
-#gaps inner 15 # i3 gaps borders
-#gaps outer 5
 set $mod Mod4
 set $term termite
 set $browser firefox
@@ -39,8 +38,6 @@ bindsym $mod+q kill
 bindsym $mod+t split toggle
 bindsym $mod+Escape exec dmenu_run
 bindsym $mod+u [instance="dropdown"] scratchpad show, move position center
-#bindsym $mod+z gaps outer current plus 5
-#bindsym $mod+Shift+z gaps outer current minus 5
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
