@@ -69,11 +69,11 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
 
-# Set workspace names
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
+# Set workspace names ✌☕☣☢☠♨⚔⚒⚓⚙⛭⛯⚛⚠⚡⛱
+set $ws1 "1:☕"
+set $ws2 "2:␥"
+set $ws3 "3:⚛"
+set $ws4 "4:⚡"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -159,4 +159,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 	position top
+	strip_workspace_numbers yes
 }
