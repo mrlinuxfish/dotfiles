@@ -22,6 +22,8 @@ set $term termite
 set $browser firefox
 font pango:monospace 10
 focus_follows_mouse no
+set $switcher rofi -location 2 -yoffset 22 -width 100 -show
+set $menu rofi -location 2 -yoffset 22 -width 100 -show run
 
 # Dropdown/Scratchpad Windows
 for_window [instance="dropdown"] floating enable
@@ -36,7 +38,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 bindsym $mod+t split toggle
-bindsym $mod+Escape exec dmenu_run
+bindsym $mod+Escape exec $menu
+bindsym $mod+Tab exec $switcher
 bindsym $mod+u [instance="dropdown"] scratchpad show, move position center
 bindsym $mod+h split h
 bindsym $mod+v split v
@@ -69,9 +72,9 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
 
-# Set workspace names 🗎✌☕☣☢☠♨⚔⚒⚓⚙⛭⛯⚛⚠⚡⛱␥
+# Set workspace names ✌☕☣☢☠♨⚔⚒⚓⚙⛭⛯⚛⚠⚡⛱␥
 set $ws1 "1:☕"
-set $ws2 "2:🗎"
+set $ws2 "2:⚒"
 set $ws3 "3:⚛"
 set $ws4 "4:⚡"
 set $ws5 "5"
