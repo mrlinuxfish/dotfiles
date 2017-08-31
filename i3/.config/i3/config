@@ -71,7 +71,7 @@ bindsym $mod+Shift+Right move right
 
 # Set workspace names 🗎✌☕☣☢☠♨⚔⚒⚓⚙⛭⛯⚛⚠⚡⛱␥
 set $ws1 "1:☕"
-set $ws2 "2:🗎" # File icon
+set $ws2 "2:🗎"
 set $ws3 "3:⚛"
 set $ws4 "4:⚡"
 set $ws5 "5"
