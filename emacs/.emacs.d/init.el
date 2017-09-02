@@ -79,15 +79,14 @@
   (require 'smartparens-config)
   (smartparens-global-strict-mode t))
 
-(use-package highlight-parentheses
+(use-package rainbow-delimiters
   :ensure t
   :config
-  (define-globalized-minor-mode global-highlight-parentheses-mode
-    highlight-parentheses-mode
+    (define-globalized-minor-mode global-rainbow-delimiters-mode
+    rainbow-delimiters-mode
     (lambda ()
-      (highlight-parentheses-mode t)))
-  (global-highlight-parentheses-mode t))
-;; Might switch to rainbow-delimiters as color is customizable
+      (rainbow-delimiters-mode t)))
+  (global-rainbow-delimiters-mode t))
 
 (use-package magit
   :ensure t
