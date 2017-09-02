@@ -1,8 +1,122 @@
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
+! Modification of moe-theme.el
+!
+! https://github.com/kuanyui/moe-theme.el
+
+! Define all moe-theme.el colors
+#define yellow_1 #fce94f
+#define yellow_2 #ffd700
+#define yellow_3 #c4a000
+#define yellow_3_5 #aaaa11
+#define yellow_4 #875f00
+#define orange_1 #ffaf5f
+#define orange_2 #ff8700
+#define orange_3 #ff5d17
+#define orange_4 #d75f00
+#define orange_5 #af5f00
+#define magenta_1 #ff7bbb
+#define magenta_2 #ff4ea3
+#define magenta_3 #ff1f8b
+#define green_1 #afff00
+#define green_2 #a1db00
+#define green_3 #5faf00
+#define green_4 #008700
+#define green_5 #005f00
+#define cyan_1 #87ffff
+#define cyan_2 #87d7af
+#define cyan_3 #00d7af
+#define cyan_4 #00ac8a
+#define cyan_5 #5faf87
+#define cyan_6 #005f5f
+#define cyan_7 #236f73
+#define blue_1 #5fafd7
+#define blue_2 #1f5bff
+#define blue_3 #005f87
+#define blue_4 #005faf
+#define blue_5 #0000af
+#define blue_6 #00005f
+#define purple_1 #d18aff
+#define purple_2 #af5fff
+#define purple_3 #9a08ff
+#define purple_4 #6c0099
+#define red_1 #ef2929
+#define red_2 #dd0000
+#define red_3 #a40000
+#define red_4 #5f0000
+#define white_1 #c6c6c6
+#define white_2 #c6c6c6
+#define white_3 #b2b2b2
+#define black_1 #a8a8a8
+#define black_2 #8a8a8a
+#define black_2_5 #6c6c6c
+#define black_3 #4e4e4e
+#define black_4 #3a3a3a
+#define black_5 #303030
+#define black_6 #000000
+#define LIGHT_BG #fdfde7
+#define white_0 #eeeeee
+#define green_02 #5fd700
+#define green_01 #d7ff00
+#define green_0 #d7ff5f
+#define green_00 #d7ff87
+#define cyan_0 #d7ffd7
+#define blue_01 #c3c9f8
+#define blue_0 #afd7ff
+#define blue_00 #d7d7ff
+#define yellow_0 #ffff87
+#define yellow_00 #ffffaf
+#define purple_0 #af87ff
+#define purple_00 #e6a8df
+#define red_0 #ff4b4b
+#define red_00 #ffafaf
+#define magenta_0 #ffafd7
+#define magenta_00 #ffd7ff
+#define orange_0 #ffaf87
+#define orange_00 #ffd787
+#define orange_000 #ffd7af
+#define linum_dark #87875f
+#define linum_light #d7d7af
+
+!
+! Terminal Color scheme
+!
+*foreground: white_1
+*background: black_5
+! CursorColor (Selection)
+*cursorColor: white_0
+
+! Black + Grey (Comment)
+*color0: black_2_5
+*color8: black_6
+! Red + Bright Red
+*color1: red_1
+*color9: red_2
+! Green + Bright Green
+*color2: green_2
+*color10: green_3
+! Yellow (Orange) + Bright Yellow (Yellow)
+*color3: orange_2
+*color11: yellow_2
+! Blue + Bright Blue
+*color4: blue_1
+*color12: blue_2
+! Magenta (Purple) + Bright Magenta
+*color5: magenta_2
+*color13: purple_1
+! Cyan (Aqua) + Bright Cyan
+*color6: cyan_3
+*color14: cyan_4
+! Light Grey (Selection) + White (Current Line)
+*color7: white_1
+*color15: white_2
+
+!
+! Rofi color scheme
+!
+
 rofi.color-enabled: true
-rofi.color-window: #393939, #393939, #268bd2
-rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
-rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
-rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+rofi.color-window: black_5, black_5, black_3
+rofi.color-normal: black_5, white_1, black_5, green_0, green_3
+rofi.color-active: black_2_5, white_1, black_5, green_0, green_3
+rofi.color-urgent: black_5, white_1, black_5, red_0, red_3
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
