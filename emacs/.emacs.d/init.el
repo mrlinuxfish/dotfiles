@@ -82,11 +82,7 @@
 (use-package rainbow-delimiters
   :ensure t
   :config
-    (define-globalized-minor-mode global-rainbow-delimiters-mode
-    rainbow-delimiters-mode
-    (lambda ()
-      (rainbow-delimiters-mode t)))
-  (global-rainbow-delimiters-mode t))
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
 (use-package magit
   :ensure t
