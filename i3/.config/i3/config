@@ -1,4 +1,4 @@
-# i3 Gaps Config File
+# i3 Config File
 
 # Auto start scripts
 exec feh --bg-fill ~/.config/wall.png & # Set background
@@ -13,7 +13,7 @@ exec volumeicon & # Start volume icon service
 exec_always setxkbmap -option caps:escape # Set keymap options
 exec_always setxkbmap -option shift:both_capslock_cancel
 exec emacs # Make sure emacs is running after startup
-exec_always --no-startup-id xrdb -load ~/.Xresources
+exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 
 # Basic Definitions
 hide_edge_borders both
@@ -117,13 +117,6 @@ for_window [window_role="gimp-dock"] floating disable; move left; resize shrink 
 for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 for_window [window_role="tr-main"] move to workspace $ws8
 for_window [class="Emacs"] move workspace $ws2
-
-#workspace $ws6 gaps inner 0
-#workspace $ws6 gaps outer 0
-#workspace $ws5 gaps inner 0
-#workspace $ws5 gaps outer 0
-#workspace $ws2 gaps inner 0
-#workspace $ws2 gaps outer 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
