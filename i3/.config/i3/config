@@ -10,9 +10,10 @@ exec redshift &
 exec compton -b # Start compositor
 exec udiskie -a & # Start disk manager
 exec volumeicon & # Start volume icon service
-exec setxkbmap -option caps:escape # Set keymap options
-exec setxkbmap -option shift:both_capslock_cancel
+exec_always setxkbmap -option caps:escape # Set keymap options
+exec_always setxkbmap -option shift:both_capslock_cancel
 exec emacs # Make sure emacs is running after startup
+exec_always --no-startup-id xrdb -load ~/.Xresources
 
 # Basic Definitions
 hide_edge_borders both
