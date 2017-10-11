@@ -30,7 +30,7 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id $term --name dropdown
+exec --no-startup-id $term -e screen --name dropdown
 
 ## Basic key bindings ##
 floating_modifier $mod
