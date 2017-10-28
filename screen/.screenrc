@@ -11,6 +11,9 @@ vbell on
 # detach on hangup
 autodetach on
 
+# start in $HOME
+chdir
+
 # don't display the copyright page
 startup_message off
 
