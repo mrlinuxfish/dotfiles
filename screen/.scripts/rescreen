@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# If reattaching to screen fails, create new screen session
+screen -r || screen
