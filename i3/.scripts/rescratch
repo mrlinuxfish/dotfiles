@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Kill the old scratchpad and then execute termite reattached to the currently running screen session
+pkill -f "termite -e rescreen --name dropdown"; termite -e rescreen --name dropdown
