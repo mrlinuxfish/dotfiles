@@ -30,7 +30,7 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id rescratch
+exec_always --no-startup-id ~/.scripts/rescratch
 
 ## Basic key bindings ##
 floating_modifier $mod
@@ -52,7 +52,6 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+n exec $browser
 bindsym $mod+m exec vlc
-bindsym $mod+p exec --no-startup-id rescratch
 
 # Movement
 bindsym $mod+j focus left
