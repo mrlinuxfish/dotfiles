@@ -23,6 +23,9 @@ export PATH=$PATH:/var/lib/snapd/snap/bin
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# Aliases
+alias hibernate="systemctl hibernate"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
