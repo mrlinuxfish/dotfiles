@@ -117,6 +117,7 @@ for_window [window_role="gimp-dock"] floating disable; move left; resize shrink 
 for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 for_window [window_role="tr-main"] move to workspace $ws8
 for_window [class="Emacs"] move workspace $ws2
+for_window [class="krita"] move workspace $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
