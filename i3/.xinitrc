@@ -1,2 +1,2 @@
-xset s off
+xset s off -dpms
 exec i3
