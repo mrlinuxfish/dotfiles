@@ -151,11 +151,11 @@
   (ido-everywhere 1)
   (flx-ido-mode 1)
   ;; allow ido to open files as root
-  (defadvice ido-find-file (after find-file-sudo activate)
-    "Find file as root if necessary."
-    (unless (and buffer-file-name
-		 (file-writable-p buffer-file-name))
-      (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+  ;; (defadvice ido-find-file (after find-file-sudo activate)
+  ;;   "Find file as root if necessary."
+  ;;   (unless (and buffer-file-name
+  ;; 		 (file-writable-p buffer-file-name))
+  ;;   (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
   ;; disable ido faces to see flx highlights.
   (setq ido-enable-flex-matching t)
   (setq ido-use-faces nil))
