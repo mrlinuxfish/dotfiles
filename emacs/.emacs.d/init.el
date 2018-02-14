@@ -193,6 +193,8 @@
 ;; Enable transient mark mode
 (transient-mark-mode t)
 
+;; Make doc-view continuous
+(setq doc-view-continuous t)
 ;; Enable ido mode
 ;; (setq indo-enable-flex-matching t)
 ;; (setq ido-everywhere t)
