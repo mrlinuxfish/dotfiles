@@ -166,7 +166,7 @@
 (server-start)
 
 ;; Highlight current line
-(hl-line-mode 1)
+(global-hl-line-mode 1)
 
 ;; Put custom-set-variables in a temp file
 (setq custom-file (make-temp-file ""))
