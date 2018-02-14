@@ -123,13 +123,13 @@ map <silent> <leader>s :setlocal spell! spelllang=en_us<cr>
 " Set rempappings for insert mode commands:
 
 " Go to first non-blank text
-inoremap ii <Esc>I
+" inoremap ii <Esc>I
 
 " Go to end of the line
-inoremap aa <Esc>A
+" inoremap aa <Esc>A
 
 " Start editing new line above current
-inoremap OO <Esc>O
+" inoremap OO <Esc>O
 
 " undo
-inoremap uu <esc>u
+" inoremap uu <esc>u
