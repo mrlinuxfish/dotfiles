@@ -55,6 +55,8 @@
   ;; Sync mobile org files on open/close of emacs
   (add-hook 'after-init-hook 'org-mobile-pull)
   (add-hook 'kill-emacs-hook 'org-mobile-push)
+  ;; Turn on word warp in org mode
+  (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
   ;; Set locations for mobile org
   (setq org-directory "~/org")
   ;; Location of inbox
