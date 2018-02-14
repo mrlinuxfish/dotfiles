@@ -165,6 +165,9 @@
 ;; Start emacs server
 (server-start)
 
+;; Highlight current line
+(hl-line-mode 1)
+
 ;; Put custom-set-variables in a temp file
 (setq custom-file (make-temp-file ""))
 
@@ -193,7 +196,7 @@
 ;; (setq ido-everywhere t)
 ;; (ido-mode t)
 
-;; Disable annoying 'bell' function.
+ ;; Disable annoying 'bell' function.
 (setq ring-bell-function 'ignore)
 
 ;; Turn off double space for sentences
