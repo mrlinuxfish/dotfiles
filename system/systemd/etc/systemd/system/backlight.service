@@ -1,0 +1,10 @@
+[Unit]
+Description=Set BLC_PWM_CTL to a good value
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/usr/bin/intel_reg write 0x00061254 0x60016001
+
+[Install]
+WantedBy=multi-user.target
