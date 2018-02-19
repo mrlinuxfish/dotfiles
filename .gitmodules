@@ -1,12 +1,12 @@
 [submodule "vundle"]
-	path = vim/.vim/bundle/Vundle.vim
+	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "vim-airline"]
-	path = vim/.vim/bundle/vim-airline
+	path = .vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "vim-fugitive"]
-	path = vim/.vim/bundle/vim-fugitive
+	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "oh-my-zsh"]
-	path = zsh/.oh-my-zsh
+	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
