@@ -1,29 +1,6 @@
 # dotfiles #
 
-Things I Use	| |
----------|------
-OS		 | Arch Linux 
-WM		 | BSPWM
-Panel	 | tint2
-Terminal | Termite
-Text editor | Gnu Emacs / vim
-Redshift |
-Shell	 | zsh
+Here lies a dotfiles git repo
 
-## Table of Contents ##
-- [Introduction](#using-these-dotfiles)
-- [Automatic Installation](#installsh)
-
-## Using these dotfiles ##
-I am using gnu stow to manage my dotfiles
-
-The dotfiles directory should be at ~/dotfiles
-
-Use `stow [directory]` to link dotfiles to the correct location. 
-Note: some directories, such as the pacman directory, cannot be stowed into your home foler and be correctly installed
-
-## install.sh ##
-I am currently working on getting this script to correctly backup files and prompt the user for what package groups to install
-
-## Misc ##
-Rebased on 2/24/2017 to fix formatting on commit messages
+The easiest way to use these dotfiles (if you plan to use all of them at once) is to clone the directory to somewhere other than the root of your home directory and then run the command:
+`stow dotfiles`
