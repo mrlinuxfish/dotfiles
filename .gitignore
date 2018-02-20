@@ -9,32 +9,32 @@ vim/.vim/init.vim
 *.directory
 
 # Emacs packages and temp files
-/emacs/.emacs.d/.org-id-locations
-/emacs/.emacs.d/ac-comphist.dat
-/emacs/.emacs.d/auto-save-list
-/emacs/.emacs.d/custom.el
-/emacs/.emacs.d/elpa/*
-/emacs/.emacs.d/image-dired/
-/emacs/.emacs.d/oauth2.plstore
-/emacs/.emacs.d/session.*
-/emacs/.emacs.d/tramp
-/emacs/.emacs.d/url/
-/emacs/.emacs.d/var/
-/emacs/.emacs.d/recentf
-/emacs/.emacs.d/ido.*
-/emacs/.emacs.d/eshell/*
-/emacs/.emacs.d/.mc-lists.el
+.emacs.d/.org-id-locations
+.emacs.d/ac-comphist.dat
+.emacs.d/auto-save-list
+.emacs.d/custom.el
+.emacs.d/elpa/*
+.emacs.d/image-dired/
+.emacs.d/oauth2.plstore
+.emacs.d/session.*
+.emacs.d/tramp
+.emacs.d/url/
+.emacs.d/var/
+.emacs.d/recentf
+.emacs.d/ido.*
+.emacs.d/eshell/*
+.emacs.d/.mc-lists.el
 *.elc
 *~
 \#*\#
 .\#*
 
 # Unnecessary files in osu directory
-/osu/.local/*
-/osu/.osu/.update-timestamp
-/osu/.osu/dosdevices/*
-/osu/.osu/drive_c/*
-/osu/.osu/system.reg
-/osu/.osu/user.reg
-/osu/.osu/userdef.reg
-/osu/.osu/winetricks.log
+.local/*
+.osu/.update-timestamp
+.osu/dosdevices/*
+.osu/drive_c/*
+.osu/system.reg
+.osu/user.reg
+.osu/userdef.reg
+.osu/winetricks.log
