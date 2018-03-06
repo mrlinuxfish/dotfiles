@@ -21,7 +21,7 @@ echo "redshift started"
 dropbox &
 
 # Easystroke (gesture recognition)
-/usr/bin/easystroke &
+# /usr/bin/easystroke &
 
 # Naga daemon (keymapper)
 # naga &
