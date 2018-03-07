@@ -13,6 +13,7 @@ exec volumeicon & # Start volume icon service
 exec ~/.scripts/setkbdlayout # Change keyboard layout settings
 exec emacs # Make sure emacs is running after startup
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
+exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
 
 # Basic Definitions
 hide_edge_borders both
