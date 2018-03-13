@@ -20,6 +20,9 @@ echo "redshift started"
 # Dropbox
 dropbox &
 
+# Xbindkeys (mouse keybindings)
+xbindkeys -f ~/.xbindkeysrc
+
 # Easystroke (gesture recognition)
 # /usr/bin/easystroke &
 
