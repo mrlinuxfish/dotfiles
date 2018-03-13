@@ -1,5 +1,5 @@
 #Map mouse 10 to esc
-"xte 'key Esc'"
+"xte 'key Escape'"
      b:10
      
 #Map mouse 11 to home
