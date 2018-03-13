@@ -1,0 +1,11 @@
+#Map mouse 10 to esc
+"xte 'key Esc'"
+     b:10
+     
+#Map mouse 11 to home
+"xte 'key Home'"
+     b:11
+     
+#Map mouse 12 to end
+"xte 'key End'"
+     b:12
