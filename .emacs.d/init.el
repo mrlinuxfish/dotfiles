@@ -161,8 +161,8 @@
   (setq ido-use-faces nil))
 
 ;; Make emacs slightly transparent '(<active> . <inactive>)
-(set-frame-parameter (selected-frame) 'alpha '(95 . 90))
-(add-to-list 'default-frame-alist '(alpha . (95 . 90)))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 95))
+(add-to-list 'default-frame-alist '(alpha . (95 . 95)))
 
 ;; Start emacs server
 (server-start)
