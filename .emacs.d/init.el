@@ -13,39 +13,39 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+(setq use-package-always-ensure t)
 
 (use-package async
-  :ensure t
   :config
   (async-bytecomp-package-mode 1))
 
 (use-package moe-theme
-  :ensure t
+
   :config
   (moe-dark)
   (moe-theme-set-color 'green))
 
-(use-package auto-complete
-  :ensure t
+(use-package company
+
   :config
-  (global-auto-complete-mode t))
+  (add-hook 'after-init-hook 'global-company-mode))
 
-(use-package popup-complete
-  :ensure t)
+;; (use-package auto-complete
+;; 
+;;   :config
+;;   (global-auto-complete-mode t))
 
-(use-package flyspell
-  :ensure t)
+(use-package popup-complete)
+
+(use-package flyspell)
 
 (use-package flyspell-popup
-  :ensure t
   :config
   (define-key flyspell-mode-map (kbd"C-;") #'flyspell-popup-correct))
 
-(use-package org-bullets
-  :ensure t)
+(use-package org-bullets)
 
 (use-package org
-  :ensure t
   :config
   ;; Use flyspell in org mode
   (add-hook 'org-mode-hook 'flyspell-mode)
@@ -70,46 +70,38 @@
 	org-edit-src-content-indentation 0))
 
 (use-package markdown-mode
-  :ensure t
   :config
   (add-hook 'markdown-mode-hook 'flyspell-mode)
   (add-hook 'markdown-mode-hook 'flyspell-buffer))
 
 (use-package smartparens
-  :ensure t
   :config
   (require 'smartparens-config)
   (smartparens-global-strict-mode t))
 
 (use-package rainbow-delimiters
-  :ensure t
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
 (use-package magit
-  :ensure t
   :config
   (global-set-key (kbd "C-x g") 'magit-status)
   (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
   (global-magit-file-mode t))
 
 (use-package flycheck
-  :ensure t
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (use-package flycheck-ledger
-  :ensure t
   :config
   (eval-after-load 'flycheck '(require 'flycheck-ledger)))
 
 (use-package ledger-mode
-  :ensure t
   :init
   (setq ledger-clear-whole-transactions 1))
 
 (use-package multiple-cursors
-  :ensure t
   :config
   (require 'multiple-cursors)
   (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -118,33 +110,27 @@
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
 
 (use-package yasnippet
-  :ensure t
   :config
   (yas-global-mode 1))
 
-(use-package pkg-info
-  :ensure t)
+(use-package pkg-info)
 
 (use-package expand-region
-  :ensure t
   :config
   (require 'expand-region)
   (global-set-key (kbd "C-=") 'er/expand-region)
   (global-set-key (kbd "C-+") 'er/contract-region))
 
 (use-package anzu
-  :ensure t
   :config
   (global-anzu-mode +1))
 
 (use-package move-text
-  :ensure t
   :config
   (require 'move-text)
   (move-text-default-bindings))
 
 (use-package flx-ido
-  :ensure t
   :config
   (require 'flx-ido)
   (ido-mode 1)
@@ -200,7 +186,7 @@
 ;; (setq ido-everywhere t)
 ;; (ido-mode t)
 
- ;; Disable annoying 'bell' function.
+;; Disable annoying 'bell' function.
 (setq ring-bell-function 'ignore)
 
 ;; Turn off double space for sentences
@@ -219,14 +205,14 @@
 
 ;; Set C-RET to insert new line and indent
 (global-set-key (kbd "<C-return>") (lambda ()
-                   (interactive)
-                   (end-of-line)
-                   (newline-and-indent)))
+				     (interactive)
+				     (end-of-line)
+				     (newline-and-indent)))
 
 ;; Set C-S-RET to insert new line above and indent
 (global-set-key (kbd "<C-S-return>") (lambda ()
-                       (interactive)
-                       (forward-line -1)
-		       (end-of-line)
-                       (newline-and-indent)))
+				       (interactive)
+				       (forward-line -1)
+				       (end-of-line)
+				       (newline-and-indent)))
 ;;; init.el ends here
