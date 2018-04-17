@@ -13,20 +13,18 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-(setq use-package-always-ensure t)
+(setq-default use-package-always-ensure t)
 
 (use-package async
   :config
   (async-bytecomp-package-mode 1))
 
 (use-package moe-theme
-
   :config
   (moe-dark)
   (moe-theme-set-color 'green))
 
 (use-package company
-
   :config
   (add-hook 'after-init-hook 'global-company-mode))
 
