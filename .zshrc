@@ -82,8 +82,11 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Set vim as preferred editor
-export VISUAL=vim
+export VISUAL=emacsclient
 export EDITOR=$VISUAL
+
+# Set default terminal
+export TERMINAL=termite
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
