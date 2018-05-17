@@ -15,7 +15,7 @@ redshift &
 echo "redshift started"
 
 # Discord
-/opt/discord-canary/DiscordCanary &
+/opt/discord-canary/DiscordCanary --start-minimized &
 
 # Dropbox
 dropbox &
