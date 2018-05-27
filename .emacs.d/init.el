@@ -144,6 +144,9 @@
   (setq ido-enable-flex-matching t)
   (setq ido-use-faces nil))
 
+;; Set emacs font size
+(set-face-attribute 'default nil :height 110)
+
 ;; Make emacs slightly transparent '(<active> . <inactive>)
 (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
 (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
