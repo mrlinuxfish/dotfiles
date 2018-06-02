@@ -42,6 +42,7 @@ bindsym $mod+q kill
 bindsym $mod+t split toggle
 bindsym $mod+Escape exec $menu
 bindsym $mod+Tab exec $switcher
+bindsym Mod1+Tab exec $switcher
 bindsym $mod+u [instance="dropdown"] scratchpad show, move position center
 bindsym $mod+h split h
 bindsym $mod+v split v
