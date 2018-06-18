@@ -120,3 +120,10 @@ rofi.color-active: black_2_5, white_1, black_5, green_0, green_3
 rofi.color-urgent: black_5, white_1, black_5, red_0, red_3
 rofi.hide-scrollbar: true
 rofi.separator-style: solid
+
+
+!
+! Allow xterm to send events
+!
+
+XTerm*allowSendEvents: true
