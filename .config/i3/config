@@ -29,7 +29,7 @@ set $menu rofi -location 2 -yoffset 22 -width 100 -show run
 
 # Dropdown/Scratchpad Windows
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] resize set 713 470
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 exec_always --no-startup-id ~/.scripts/tmux-scratchpad.sh
