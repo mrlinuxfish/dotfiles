@@ -3,8 +3,8 @@ Indexing-Enabled=false
 
 [General]
 dbVersion=2
-exclude filters=.xsession-errors*,*.pyc,confdefs.h,CMakeFiles,.git,lost+found,*.lo,*.tmp,_darcs,autom4te,CMakeCache.txt,.histfile.*,qrc_*.cpp,.obj,CTestTestfile.cmake,libtool,litmain.sh,*.elc,config.status,CMakeTmp,*.la,confstat,*.csproj,*.aux,*.po,.hg,.uic,*.part,.moc,*.vm*,*.nvram,.pch,core-dumps,*.swap,*.rcore,*.orig,*.gmo,*.o,ui_*.h,po,cmake_install.cmake,Makefile.am,.svn,*.moc,*~,*.omf,*.pc,*.rej,conftest,CMakeTmpQmake,*.m4,__pycache__,lzo,*.class,.bzr,CVS,moc_*.cpp,*.loT
-exclude filters version=2
+exclude filters=*.map,*.elc,.uic,libtool,node_modules,*.qrc,*.tmp,nbproject,*.moc,*.m4,*~,.pch,config.status,.histfile.*,*.swap,confdefs.h,qrc_*.cpp,CMakeFiles,*.aux,CTestTestfile.cmake,*.po,.hg,*.loT,*.pyo,.moc,lzo,.xsession-errors*,core-dumps,*.so,*.la,moc_*.cpp,*.qmlc,node_packages,CVS,.obj,CMakeTmp,*.csproj,ui_*.h,*.db,CMakeCache.txt,*.part,confstat,.svn,lost+found,.git,*.class,.bzr,autom4te,*.vm*,__pycache__,*.gmo,Makefile.am,*.jsc,*.pyc,litmain.sh,*.pc,*.o,cmake_install.cmake,conftest,*.lo,_darcs,*.omf,*.a,*.orig,.yarn-cache,*.rcore,*.rej,.npm,*.init,*.nvram,.yarn,po,CMakeTmpQmake,*.ini
+exclude filters version=3
 exclude folders[$e]=/var/lib/snapd/snap/core/4206/,/var/lib/snapd/snap/core/1577/,/var/lib/snapd/snap/core/4110/,/mnt/video/,/mnt/ein/
 first run=true
 folders[$e]=$HOME/
