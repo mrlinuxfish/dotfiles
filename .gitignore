@@ -24,6 +24,7 @@ vim/.vim/init.vim
 .emacs.d/ido.*
 .emacs.d/eshell/*
 .emacs.d/.mc-lists.el
+.emacs.d/.last-package-update-day
 *.elc
 *~
 \#*\#
