@@ -3,9 +3,36 @@
 ;;; Code:
 ;; Initialize package archives
 (require 'package)
+(setq load-prefer-newer t
+package-enable-at-startup nil)
+
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")
+("org" . "http://orgmode.org/elpa/")
+("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+(package-refresh-contents)
+(package-install 'use-package))
+
+;; To load newer version of org
+(package-initialize)(require 'package)
+;(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+'("melpa" . "https://melpa.org/packages/"))
+;(package-initialize)
+(package-refresh-contents)
+
+(unless (package-installed-p 'use-package)
+(package-refresh-contents)
+(package-install 'use-package))
+
+(eval-when-compile (require 'use-package))
+
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
@@ -13,7 +40,19 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-(setq-default use-package-always-ensure t)
+
+(eval-when-compile
+  (require 'use-package))
+
+;; Always use ':ensure t' for use-package
+(setq use-package-always-ensure t)
+
+(use-package auto-package-update
+  :ensure t
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+  (auto-package-update-maybe))
 
 (use-package async
   :config
@@ -143,6 +182,16 @@
   ;; disable ido faces to see flx highlights.
   (setq ido-enable-flex-matching t)
   (setq ido-use-faces nil))
+
+;; Tablist is required for pdf-tools
+(use-package tablist)
+
+(when (eq system-type 'gnu/linux)
+  (use-package pdf-tools
+    :config
+    (pdf-tools-install)
+    (setq TeX-view-program-selection '((output-pdf "pdf-tools")))
+    (setq TeX-view-program-list '(("pdf-tools" "TeX-pdf-tools-sync-view")))))
 
 ;; Set emacs font size
 (set-face-attribute 'default nil :height 110)
