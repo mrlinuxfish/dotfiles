@@ -39,11 +39,6 @@
   :config
   (add-hook 'after-init-hook 'global-company-mode))
 
-;; (use-package auto-complete
-;; 
-;;   :config
-;;   (global-auto-complete-mode t))
-
 (use-package popup-complete)
 
 (use-package flyspell)
@@ -146,12 +141,6 @@
   (ido-mode 1)
   (ido-everywhere 1)
   (flx-ido-mode 1)
-  ;; allow ido to open files as root
-  ;; (defadvice ido-find-file (after find-file-sudo activate)
-  ;;   "Find file as root if necessary."
-  ;;   (unless (and buffer-file-name
-  ;; 		 (file-writable-p buffer-file-name))
-  ;;   (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
   ;; disable ido faces to see flx highlights.
   (setq ido-enable-flex-matching t)
   (setq ido-use-faces nil))
@@ -204,10 +193,6 @@
 
 ;; Make doc-view continuous
 (setq-default doc-view-continuous t)
-;; Enable ido mode
-;; (setq indo-enable-flex-matching t)
-;; (setq ido-everywhere t)
-;; (ido-mode t)
 
 ;; Disable annoying 'bell' function.
 (setq ring-bell-function 'ignore)
