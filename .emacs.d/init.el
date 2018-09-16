@@ -1,42 +1,14 @@
 ;;; package --- sumary
 ;;; Commentary:
 ;;; Code:
-;; Initialize package archives
+;; Bootstrap 'use-package'
 (require 'package)
-(setq load-prefer-newer t
-package-enable-at-startup nil)
-
-(setq package-archives '(("melpa" . "http://melpa.org/packages/")
-("org" . "http://orgmode.org/elpa/")
-("gnu" . "http://elpa.gnu.org/packages/")))
-(package-initialize)
-
-;; Bootstrap `use-package'
-(unless (package-installed-p 'use-package)
-(package-refresh-contents)
-(package-install 'use-package))
-
-;; To load newer version of org
-(package-initialize)(require 'package)
-;(setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-'("melpa" . "https://melpa.org/packages/"))
-;(package-initialize)
-(package-refresh-contents)
-
-(unless (package-installed-p 'use-package)
-(package-refresh-contents)
-(package-install 'use-package))
-
-(eval-when-compile (require 'use-package))
-
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 (package-initialize)
 
-;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -121,6 +93,7 @@ package-enable-at-startup nil)
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
 (use-package magit
+  :pin melpa-stable
   :config
   (global-set-key (kbd "C-x g") 'magit-status)
   (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
