@@ -1,6 +1,7 @@
 # i3 Config File
 
 # Auto start scripts
+exec_always jackd -R -P89 -dalsa -dhw:0 -p256 -n3
 exec feh --bg-fill ~/.config/wall.png & # Set background
 exec /usr/bin/dropbox & # Start dropbox
 exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
@@ -9,12 +10,12 @@ exec_always killall -q redshift # Start redshift
 exec_always redshift &
 exec compton -b # Start compositor
 exec udiskie -a & # Start disk manager
-exec volumeicon & # Start volume icon service
 exec xbindkeys -f ~/.xbindkeysrc # Read keybinding file for mouse buttons
 exec_always ~/.scripts/setkbdlayout # Change keyboard layout settings
 exec emacs # Make sure emacs is running after startup
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
+
 
 # Basic Definitions
 hide_edge_borders both
@@ -76,6 +77,12 @@ bindsym $mod+Up focus up
 bindsym $mod+Shift+Up move up
 bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 #decrease sound volume
+bindsym XF86Mute exec --no-startup-id pulsemixer --toggle-mute # mute sound
+bindsym XF86Launch1 exec --no-startup-id pulsemixer --toggle-mute # mute sound (mapped to 'ThinkVantage' button because mute button does not work on x200)
 
 # Set workspace names ✌☕☣☢☠♨⚔⚒⚓⚙⛭⛯⚛⚠⚡⛱␥
 set $ws1 "1:⌿"
