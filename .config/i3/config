@@ -32,6 +32,7 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 713 470
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] sticky enable
 exec_always --no-startup-id ~/.scripts/tmux-scratchpad.sh
 
 ## Basic key bindings ##
