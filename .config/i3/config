@@ -162,6 +162,7 @@ bar {
         status_command i3status -c ~/.config/i3/i3status.conf
 	position top
 	strip_workspace_numbers yes
+	tray_output none
 	colors {
         background #000000
         statusline #ffffff
