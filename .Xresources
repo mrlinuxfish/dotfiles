@@ -80,7 +80,7 @@
 ! Terminal Color scheme
 !
 *foreground: white_1
-*background: black_5
+*.background: black_5
 ! CursorColor (Selection)
 *cursorColor: white_0
 
@@ -127,3 +127,13 @@ rofi.separator-style: solid
 !
 
 XTerm*allowSendEvents: true
+
+
+!
+! Pure Data stuff
+!
+
+PdWindowbackground: #f0f000
+PdWindowforeground: #202000
+PatchWindowbackground: #f0f000
+PatchWindowforeground: #202000
