@@ -1,7 +1,7 @@
 # i3 Config File
 
 # Auto start scripts
-exec_always jackd -R -P89 -dalsa -dhw:0 -p256 -n3
+exec_always ~/.scripts/jack1.sh
 exec feh --bg-fill ~/.config/wall.png & # Set background
 exec /usr/bin/dropbox & # Start dropbox
 exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
