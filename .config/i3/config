@@ -2,7 +2,8 @@
 
 # Auto start scripts
 exec_always ~/.scripts/jack1.sh
-exec feh --bg-fill ~/.config/wall.png & # Set background
+exec_always autorandr --change # Detect correct xrandr setting when loading i3
+exec_always feh --bg-fill ~/.config/wall.png & # Set background
 exec /usr/bin/dropbox & # Start dropbox
 exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
 exec unclutter & # Make cursor disappear when not needed
@@ -15,7 +16,6 @@ exec_always ~/.scripts/setkbdlayout # Change keyboard layout settings
 exec emacs # Make sure emacs is running after startup
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
-exec_always autorandr --change # Detect correct xrandr setting when loading i3
 
 # Basic Definitions
 hide_edge_borders both
