@@ -77,6 +77,11 @@
 #define linum_light #d7d7af
 
 !
+! Define cursor size
+!
+Xcursor.size: 16
+
+!
 ! Terminal Color scheme
 !
 *foreground: white_1
