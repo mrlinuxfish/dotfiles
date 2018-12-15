@@ -13,14 +13,14 @@ off
 output DP-5
 off
 output DVI-I-1
-gamma 0.769:0.667:0.556
+gamma 0.769:0.769:0.769
 mode 1680x1050
 pos 1920x0
 rate 59.95
 rotate left
 output HDMI-0
-gamma 0.769:0.667:0.556
+gamma 0.769:0.769:0.769
 mode 1920x1080
-pos 0x336
+pos 0x368
 primary
 rate 60.00
