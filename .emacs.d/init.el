@@ -146,14 +146,14 @@
   (setq ido-use-faces nil))
 
 ;; Tablist is required for pdf-tools
-(use-package tablist)
+;; (use-package tablist)
 
-(when (eq system-type 'gnu/linux)
-  (use-package pdf-tools
-    :config
-    (pdf-tools-install)
-    (setq TeX-view-program-selection '((output-pdf "pdf-tools")))
-    (setq TeX-view-program-list '(("pdf-tools" "TeX-pdf-tools-sync-view")))))
+;; (when (eq system-type 'gnu/linux)
+;;   (use-package pdf-tools
+;;     :config
+;;     (pdf-tools-install)
+;;     (setq TeX-view-program-selection '((output-pdf "pdf-tools")))
+;;     (setq TeX-view-program-list '(("pdf-tools" "TeX-pdf-tools-sync-view")))))
 
 ;; Set emacs font size
 (set-face-attribute 'default nil :height 110)
