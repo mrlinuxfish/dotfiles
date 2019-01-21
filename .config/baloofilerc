@@ -3,8 +3,8 @@ Indexing-Enabled=false
 
 [General]
 dbVersion=2
-exclude filters=*.map,*.elc,.uic,libtool,node_modules,*.qrc,*.tmp,nbproject,*.moc,*.m4,*~,.pch,config.status,.histfile.*,*.swap,confdefs.h,qrc_*.cpp,CMakeFiles,*.aux,CTestTestfile.cmake,*.po,.hg,*.loT,*.pyo,.moc,lzo,.xsession-errors*,core-dumps,*.so,*.la,moc_*.cpp,*.qmlc,node_packages,CVS,.obj,CMakeTmp,*.csproj,ui_*.h,*.db,CMakeCache.txt,*.part,confstat,.svn,lost+found,.git,*.class,.bzr,autom4te,*.vm*,__pycache__,*.gmo,Makefile.am,*.jsc,*.pyc,litmain.sh,*.pc,*.o,cmake_install.cmake,conftest,*.lo,_darcs,*.omf,*.a,*.orig,.yarn-cache,*.rcore,*.rej,.npm,*.init,*.nvram,.yarn,po,CMakeTmpQmake,*.ini
-exclude filters version=3
+exclude filters=*.map,*.gmo,.uic,*.elc,Makefile.am,ui_*.h,*.db,po,*.nvram,.obj,*.la,node_packages,CMakeFiles,.svn,moc_*.cpp,cmake_install.cmake,.git,*.rcore,*.pc,autom4te,node_modules,*.csproj,*.moc,.pch,*.so,*.fasta,*.gb,CMakeCache.txt,.xsession-errors*,*~,*.orig,CMakeTmpQmake,*.m4,*.loT,CVS,*.pyo,_darcs,.moc,*.init,.yarn,qrc_*.cpp,CMakeTmp,*.pyc,*.faa,.hg,*.qrc,*.qmlc,confstat,libtool,litmain.sh,CTestTestfile.cmake,.yarn-cache,*.rej,*.fq,.histfile.*,*.class,*.omf,nbproject,*.swap,*.a,*.po,*.part,*.jsc,*.vm*,config.status,lzo,core-dumps,*.o,*.fastq,.npm,*.fna,confdefs.h,*.aux,conftest,*.gbff,*.tmp,.bzr,__pycache__,*.ini,*.lo,lost+found
+exclude filters version=4
 exclude folders[$e]=/var/lib/snapd/snap/core/4206/,/var/lib/snapd/snap/core/1577/,/var/lib/snapd/snap/core/4110/,/mnt/video/,/mnt/ein/
 first run=true
 folders[$e]=$HOME/
