@@ -11,8 +11,8 @@ exec xbindkeys -f ~/.xbindkeysrc # Read keybinding file for mouse buttons
 exec_always ~/.scripts/setkbdlayout # Change keyboard layout settings
 exec emacs # Make sure emacs is running after startup
 exec_always killall -q redshift # Start redshift
-exec_always redshift &
-exec_always feh --bg-fill ~/.config/wall.png & # Set background
+exec_always sleep 2; redshift &
+exec_always sleep 2; feh --bg-fill ~/.config/wall.png & # Set background
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
 
