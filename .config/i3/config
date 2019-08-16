@@ -15,6 +15,7 @@ exec_always sleep 2; redshift &
 exec_always sleep 2; feh --bg-fill ~/.config/wall.png & # Set background
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
+exec_always xset -b # Disable beep (audio bell)
 
 # Basic Definitions
 hide_edge_borders both
