@@ -5,7 +5,7 @@
 exec_always autorandr --change # Detect correct xrandr setting when loading i3
 exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
 exec unclutter & # Make cursor disappear when not needed
-exec compton -b # Start compositor
+# exec compton -b # Start compositor
 exec udiskie -a & # Start disk manager
 exec xbindkeys -f ~/.xbindkeysrc # Read keybinding file for mouse buttons
 exec_always ~/.scripts/setkbdlayout # Change keyboard layout settings
@@ -134,6 +134,9 @@ for_window [window_role="tr-main"] move to workspace $ws8
 for_window [class="Emacs"] move workspace $ws2
 for_window [class="krita"] move workspace $ws4
 for_window [class="Wine" title="osu!"] floating enable; fullscreen
+for_window [class="Steam"] move workspace $ws9
+for_window [class="discord"] move workspace $ws7
+for_window [class="transmission"] move workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
