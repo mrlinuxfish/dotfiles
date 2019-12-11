@@ -4,6 +4,7 @@
 # exec_always ~/.scripts/jack1.sh
 exec_always autorandr --change # Detect correct xrandr setting when loading i3
 exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
+exec dunst &
 exec unclutter & # Make cursor disappear when not needed
 exec sleep 2; compton -b # Start compositor
 exec udiskie -a & # Start disk manager
