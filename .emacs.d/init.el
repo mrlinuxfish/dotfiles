@@ -88,10 +88,9 @@
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
 (use-package magit
-  :pin melpa-stable
   :config
   (global-set-key (kbd "C-x g") 'magit-status)
-  (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+  (global-set-key (kbd "C-x M-g") 'magit-dispatch)
   (global-magit-file-mode t))
 
 (use-package flycheck
