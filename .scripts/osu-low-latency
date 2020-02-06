@@ -3,7 +3,7 @@
 export PATH=/opt/wine-osu/bin:$PATH
 export vblank_mode=0
 export WINEPREFIX=/home/atomsk/.osu
-export STAGING_AUDIO_DURATION=4000
+export STAGING_AUDIO_DURATION=4500
 
 # Execute osu with correct wine prefix
 cd ~/osu!/
