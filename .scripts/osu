@@ -1,4 +1,21 @@
 #!/bin/bash
 
-# Execute osu with correct wine prefix
-vblank_mode=0 WINEPREFIX=~/.osu wine ~/osu\!/osu\!.exe
+# Turn off vsync
+export vblank_mode=0
+# Use correct prefix
+export WINEPREFIX=/home/atomsk/.osu
+# Reduce latency
+export WINE_RT=15
+export WINE_SRV_RT=10
+export STAGING_AUDIO_DURATION=4500 # Smaller number = less latency (it can be really unstable if too low.)
+
+# Restart Pulse (I've noticed problems with playback rate when this doesn't happen)
+pulseaudio -k
+pulseaudio --start
+
+# EXECUTE osu with correct wine prefix
+cd ~/osu!/
+wine osu!.exe "$@"
+
+# Change nice value to make osu have higher priority
+nice -n -4
