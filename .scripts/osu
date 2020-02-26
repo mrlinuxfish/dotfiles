@@ -13,9 +13,9 @@ export STAGING_AUDIO_DURATION=4500 # Smaller number = less latency (it can be re
 pulseaudio -k
 pulseaudio --start
 
-# EXECUTE osu with correct wine prefix
+# EXECUTE osu with correct wine prefix and apply favorable niceness (priority)
 cd ~/osu!/
-wine osu!.exe "$@"
+ionice -c2 wine osu!.exe "$@" &
+sleep 30
+renice -n -4 $(pidof /usr/bin/wineserver)
 
-# Change nice value to make osu have higher priority
-nice -n -4
