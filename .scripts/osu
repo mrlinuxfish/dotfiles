@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Use the osu optimized wine installation
+export PATH=/opt/wine-osu/bin:$PATH
+
 # Turn off vsync
 export vblank_mode=0
 # Use correct prefix
