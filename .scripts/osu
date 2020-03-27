@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Use the osu optimized wine installation
-export PATH=/opt/wine-osu/bin:$PATH
+#export PATH=/opt/wine-osu/bin:$PATH
 
 # Turn off vsync
 export vblank_mode=0
@@ -10,11 +10,11 @@ export WINEPREFIX=/home/atomsk/.osu
 # Reduce latency
 export WINE_RT=15
 export WINE_SRV_RT=10
-export STAGING_AUDIO_DURATION=4500 # Smaller number = less latency (it can be really unstable if too low.)
+export STAGING_AUDIO_DURATION=9800 # Smaller number = less latency (it can be really unstable if too low.)
 
 # Restart Pulse (I've noticed problems with playback rate when this doesn't happen)
-pulseaudio -k
-pulseaudio --start
+# pulseaudio -k
+# pulseaudio --start
 
 # EXECUTE osu with correct wine prefix and apply favorable niceness (priority)
 cd ~/osu!/
