@@ -138,6 +138,7 @@ for_window [class="Wine" title="^osu!$"] floating enable; fullscreen
 for_window [class="^Steam$"] move workspace $ws9
 for_window [class="discord"] move workspace $ws7
 for_window [class="transmission"] move workspace $ws10
+for_window [class="zoom"] move workspace $ws6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
