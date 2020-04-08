@@ -26,6 +26,7 @@ ZSH_THEME="robbyrussell"
 # Aliases
 alias hibernate="systemctl hibernate"
 alias dots="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME/"
+alias vim="nvim"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
