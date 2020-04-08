@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Uniform x/y size adjustment (old size 1.35)
-size=1.7
+size=1.35
 
 # x/y offset
 x_offset=-.2
