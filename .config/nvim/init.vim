@@ -20,6 +20,7 @@ call plug#end()
 " Basics not taken care of by vim-sensible
 set smartcase
 set ignorecase
+set clipboard=unnamedplus
 
 " Plugin config
 
