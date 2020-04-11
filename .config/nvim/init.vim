@@ -21,6 +21,8 @@ call plug#end()
 set smartcase
 set ignorecase
 set clipboard=unnamedplus
+set expandtab
+set number relativenumber
 
 " Plugin config
 
