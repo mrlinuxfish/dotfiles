@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Set vim as preferred editor
-export VISUAL=emacsclient
+export VISUAL=nvim
 export EDITOR=$VISUAL
 
 # Set default terminal

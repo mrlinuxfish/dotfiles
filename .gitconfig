@@ -6,4 +6,4 @@
 [branch]
 	autosetuprebase = always
 [core]
-	editor = emacsclient
+	editor = $VISUAL
