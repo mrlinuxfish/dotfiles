@@ -12,3 +12,9 @@ Obviously, a if you want to use a dotfile, you need the program it goes with. Th
 ## nvim ##
 
 - python-pynvim
+
+## xbindkeys (mouse button remap)
+
+- xbindkeys
+- xautomation
+- xev
