@@ -7,3 +7,7 @@
 	autosetuprebase = always
 [core]
 	editor = $VISUAL
+[merge]
+	tool = vimdiff
+[mergetool "vimdiff"]
+	path = nvim
