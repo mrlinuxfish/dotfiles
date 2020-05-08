@@ -83,6 +83,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
 
+# Move between active workspaces
+bindsym $mod+Shift+Ctrl+Right workspace next_on_output
+bindsym $mod+Shift+Ctrl+Left workspace prev_on_output
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 #decrease sound volume
