@@ -31,6 +31,7 @@ set shiftwidth=4
 set number relativenumber
 set mouse=a
 set nohlsearch
+set nowrap
 
 " Terminal mode bindings Esc exits to normal mode, leader t opens terminal
 tnoremap <Esc> <C-\><C-n>
@@ -38,6 +39,9 @@ map <leader>t :terminal<cr>
 
 " Save file as sudo
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+" Open markdown files with wrapping and spell check
+autocmd FileType markdown setlocal spell! spelllang=en_us wrap linebreak
 
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
 autocmd BufWritePre * %s/\s\+$//e
