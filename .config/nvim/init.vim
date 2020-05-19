@@ -32,6 +32,8 @@ set number relativenumber
 set mouse=a
 set nohlsearch
 set nowrap
+set list
+set listchars=trail:·,tab:!·
 
 " Terminal mode bindings Esc exits to normal mode, leader t opens terminal
 tnoremap <Esc> <C-\><C-n>
