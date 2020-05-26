@@ -63,6 +63,9 @@ bindsym $mod+m exec vlc
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
+## Disable mouse warping
+mouse_warping none
+
 # Movement
 bindsym $mod+j focus left
 bindsym $mod+Shift+j move left
