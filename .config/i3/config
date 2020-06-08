@@ -91,10 +91,10 @@ bindsym $mod+Shift+Ctrl+Right workspace next_on_output
 bindsym $mod+Shift+Ctrl+Left workspace prev_on_output
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5 #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute # mute sound
-bindsym XF86Launch1 exec --no-startup-id pulsemixer --toggle-mute # mute sound (mapped to 'ThinkVantage' button because mute button does not work on x200)
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86Launch1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound (mapped to 'ThinkVantage' button because mute button does not work on x200)
 
 # Set workspace names ✌☕☣☢☠♨⚔⚒⚓⚙⛭⛯⚛⚠⚡⛱␥
 set $ws1 "1:⌿"
