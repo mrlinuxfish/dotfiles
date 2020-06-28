@@ -27,6 +27,7 @@ ZSH_THEME="robbyrussell"
 alias hibernate="systemctl hibernate"
 alias dots="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME/"
 alias vim="nvim"
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -121,4 +122,3 @@ man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
-

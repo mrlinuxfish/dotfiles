@@ -1,6 +1,9 @@
 backup/
 get_conflicts
 
+# Dotfiles git files
+.cfg
+
 # Vim temp files
 *.swp
 vim/.vim/init.vim
