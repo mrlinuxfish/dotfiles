@@ -2,8 +2,9 @@
 
 Here lies a dotfiles git repo
 
-The easiest way to use these dotfiles (if you plan to use all of them at once) is to clone the directory to somewhere other than the root of your home directory and then run the command:
-`stow dotfiles`
+The easiest way to use these dotfiles is to use the install script. For more info check out [this link](https://www.atlassian.com/git/tutorials/dotfiles)
+
+`curl -Lks http://bit.do/cfg-install | /bin/bash`
 
 # Dependencies #
 
