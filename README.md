@@ -4,7 +4,7 @@ Here lies a dotfiles git repo
 
 The easiest way to use these dotfiles is to use the install script. For more info check out [this link](https://www.atlassian.com/git/tutorials/dotfiles)
 
-`curl -Lks http://bit.do/cfg-install | /bin/bash`
+`curl -Lks https://gitlab.com/snippets/1990795/raw | /bin/bash`
 
 # Dependencies #
 
