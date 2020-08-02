@@ -23,7 +23,13 @@ export PATH=$PATH:/var/lib/snapd/snap/bin
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+## Navigate to directories without ls
+setopt autocd
+
+## Typo correction
+setopt CORRECT
 # Aliases
+
 alias hibernate="systemctl hibernate"
 alias dots="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME/"
 alias vim="nvim"
@@ -64,8 +70,17 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Delete duplicate history output
-HIST_IGNORE_ALL_DUPS
+## Ignore all repetitions of commands
+setopt HIST_IGNORE_ALL_DUPS
+
+## Do not display the string found earlier
+setopt HIST_FIND_NO_DUPS
+
+## Ignore rows if they are duplicates
+setopt HIST_IGNORE_DUPS
+
+## Delete empty lines from history file
+setopt HIST_REDUCE_BLANKS
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
