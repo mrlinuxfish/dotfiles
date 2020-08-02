@@ -2,7 +2,7 @@
 # /home/atomsk/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Sun Sep  2 14:38:46 2018
+# Generated on Sun Jun 28 20:14:48 2020
 #
 
 # ConfigProperties:
@@ -13,9 +13,9 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,3000
 
 # Attributes:
 
@@ -29,6 +29,7 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 0/LogAnisoAppControlled=1
 0/OpenGLImageSettings=0
 0/FSAAAppEnhanced=0
+0/ShowGraphicsVisualIndicator=0
 [DPY:DVI-I-0]/Dithering=0
 [DPY:DVI-I-0]/DitheringMode=0
 [DPY:DVI-I-0]/DitheringDepth=0
