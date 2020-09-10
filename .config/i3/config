@@ -1,7 +1,7 @@
 # i3 Config File
 
 # Auto start scripts
-exec cadence
+exec cadence --minimized
 exec_always autorandr --change # Detect correct xrandr setting when loading i3
 exec xsetroot -cursor_name left_ptr # Remove 'x' cursor
 exec dunst &
