@@ -12,7 +12,7 @@ exec_always xbindkeys -f ~/.xbindkeysrc # Read keybinding file for mouse buttons
 exec_always ~/.scripts/setkbdlayout # Change keyboard layout settings
 exec_always killall -q redshift # Start redshift
 exec_always sleep 2; redshift &
-exec nitrogen --restore
+exec_always sleep 2; nitrogen --restore &
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
 exec_always xset -b # Disable beep (audio bell)
@@ -46,8 +46,8 @@ bindsym $mod+Escape exec $menu
 bindsym $mod+Tab exec $switcher
 bindsym Mod1+Tab exec $switcher
 bindsym $mod+u [instance="dropdown"] scratchpad show, move position center
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+v split h  # Split direction is not intuitive
+bindsym $mod+h split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
