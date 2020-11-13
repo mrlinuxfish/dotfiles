@@ -40,7 +40,6 @@ exec_always --no-startup-id ~/.scripts/tmux-scratchpad.sh
 floating_modifier $mod
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
-bindsym $mod+q kill
 bindsym $mod+t split toggle
 bindsym $mod+Escape exec $menu
 bindsym $mod+Tab exec $switcher
