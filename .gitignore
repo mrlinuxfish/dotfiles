@@ -1,6 +1,9 @@
 backup/
 get_conflicts
 
+# Tags
+tags
+
 # Dotfiles git files
 .cfg
 
