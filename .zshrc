@@ -10,7 +10,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
 
 # Add local bin to path
-export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:$HOME/.local/bin
 
 # Add .scripts to path
 export PATH=$PATH:$HOME/.scripts
