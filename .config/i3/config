@@ -45,7 +45,8 @@ bindsym $mod+Escape exec $menu
 bindsym $mod+Tab exec $switcher
 bindsym Mod1+Tab exec $switcher
 bindsym $mod+u [instance="dropdown"] scratchpad show, move position center
-bindsym $mod+v split h  # Split direction is not intuitive
+# Split direction is not intuitive and has been changed to make sense to me
+bindsym $mod+v split h
 bindsym $mod+h split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
