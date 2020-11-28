@@ -19,3 +19,6 @@ Obviously, a if you want to use a dotfile, you need the program it goes with. Th
 - xbindkeys
 - xautomation
 - xev
+
+## Qt theme loading from gtk
+- qt5-styleplugins
