@@ -14,6 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'dense-analysis/ale'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 " Call Plug Install to install plugins
 call plug#end()
