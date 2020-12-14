@@ -13,6 +13,7 @@ Obviously, a if you want to use a dotfile, you need the program it goes with. Th
 ## nvim ##
 
 - python-pynvim
+
     If pynvim is not in your repo, you can install it with
     ```
     pip2 install neovim
