@@ -30,7 +30,7 @@ set $menu rofi -location 2 -yoffset 22 -width 100 -show run
 
 # Dropdown/Scratchpad Windows
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 713 470
+for_window [instance="dropdown"] resize set 90 ppt 85 ppt
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] sticky disable
@@ -94,6 +94,10 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86Launch1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound (mapped to 'ThinkVantage' button because mute button does not work on x200)
+
+# Backlight controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # Set workspace names ✌☕☣☢☠♨⚔⚒⚓⚙⛭⛯⚛⚠⚡⛱␥
 set $ws1 "1:⌿"
