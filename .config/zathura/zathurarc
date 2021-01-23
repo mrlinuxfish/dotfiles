@@ -1,0 +1,2 @@
+# Send selections to system clipboard
+set selection-clipboard clipboard
