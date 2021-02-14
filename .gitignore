@@ -37,7 +37,6 @@ vim/.vim/init.vim
 .\#*
 
 # Unnecessary files in osu directory
-.local/*
 .osu/.update-timestamp
 .osu/dosdevices/*
 .osu/drive_c/*
