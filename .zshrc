@@ -31,12 +31,15 @@ setopt autocd
 
 ## Typo correction
 setopt CORRECT
-# Aliases
 
+# Dotfile config
 alias hibernate="systemctl hibernate"
 alias dots="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME/"
-alias vim="nvim"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+setopt complete_aliases
+
+# Aliases
+alias vim="nvim"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
