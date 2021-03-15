@@ -40,6 +40,12 @@ set listchars=trail:·,tab:!·
 tnoremap <Esc> <C-\><C-n>
 map <leader>t :terminal<cr>
 
+" Ctrl+Backspace erases word to the left in insert and command-line modes
+noremap! <C-H> <C-W>
+
+" Ctrl+Del erases word to the right in insert mode
+inoremap <C-kDel> <space><ESC>ce
+
 " Save file as sudo
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
@@ -55,18 +61,18 @@ map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 " Fix navigation controls
 set splitbelow splitright
-tnoremap <C-h> <C-\><C-N><C-w>h
-tnoremap <C-j> <C-\><C-N><C-w>j
-tnoremap <C-k> <C-\><C-N><C-w>k
-tnoremap <C-l> <C-\><C-N><C-w>l
-inoremap <C-h> <C-\><C-N><C-w>h
-inoremap <C-j> <C-\><C-N><C-w>j
-inoremap <C-k> <C-\><C-N><C-w>k
-inoremap <C-l> <C-\><C-N><C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+tnoremap <C-Left> <C-\><C-N><C-w>h
+tnoremap <C-Down> <C-\><C-N><C-w>j
+tnoremap <C-Up> <C-\><C-N><C-w>k
+tnoremap <C-Right> <C-\><C-N><C-w>l
+inoremap <C-Left> <C-\><C-N><C-w>h
+inoremap <C-Down> <C-\><C-N><C-w>j
+inoremap <C-Up> <C-\><C-N><C-w>k
+inoremap <C-Right> <C-\><C-N><C-w>l
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Right> <C-w>l
 
 " Plugin config
 
