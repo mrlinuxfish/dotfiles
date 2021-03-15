@@ -41,6 +41,9 @@ setopt complete_aliases
 # Aliases
 alias vim="nvim"
 
+# Ctrl backspace
+bindkey '^H' backward-kill-word
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
