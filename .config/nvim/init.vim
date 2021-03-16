@@ -74,6 +74,14 @@ nnoremap <C-Down> <C-w>j
 nnoremap <C-Up> <C-w>k
 nnoremap <C-Right> <C-w>l
 
+"Run nvr when :editor tries to open a nested nvim instance
+if has('nvim')
+  let $GIT_EDITOR = 'nvr -cc split --remote-wait'
+endif
+autocmd BufReadPost,BufNewFile .git/**/* set bufhidden=delete
+autocmd BufReadPost,BufNewFile .git/* set bufhidden=delete
+autocmd TermOpen * set bufhidden=delete
+
 " Plugin config
 
 " nerdtree toggle with leader n
