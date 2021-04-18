@@ -24,7 +24,7 @@ set $mod Mod4
 set $term termite
 set $browser firefox
 font pango:monospace 10
-focus_follows_mouse no
+focus_follows_mouse yes
 set $switcher rofi -location 2 -yoffset 22 -width 100 -show
 set $menu rofi -location 2 -yoffset 22 -width 100 -show run
 
