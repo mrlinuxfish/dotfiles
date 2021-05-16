@@ -74,6 +74,11 @@ nnoremap <C-Down> <C-w>j
 nnoremap <C-Up> <C-w>k
 nnoremap <C-Right> <C-w>l
 
+" Tab navigation
+nnoremap <C-W><space> :tab split<cr>
+nnoremap <C-S-Left> :tabp<cr>
+nnoremap <C-S-Right> :tabn<cr>
+
 "Run nvr when :editor tries to open a nested nvim instance
 if has('nvim')
   let $GIT_EDITOR = 'nvr -cc split --remote-wait'
