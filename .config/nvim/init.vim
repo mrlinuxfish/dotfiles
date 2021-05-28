@@ -42,6 +42,7 @@ map <leader>t :terminal<cr>
 
 " Ctrl+Backspace erases word to the left in insert and command-line modes
 noremap! <C-H> <C-W>
+tnoremap <C-H> <C-W>
 
 " Ctrl+Del erases word to the right in insert mode
 inoremap <C-kDel> <space><ESC>ce
