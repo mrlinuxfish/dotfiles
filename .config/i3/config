@@ -44,7 +44,7 @@ bindsym $mod+t split toggle
 bindsym $mod+Escape exec $menu
 bindsym $mod+Tab exec $switcher
 bindsym Mod1+Tab exec $switcher
-bindsym $mod+u [instance="dropdown"] scratchpad show, move position center
+bindsym $mod+comma [instance="dropdown"] scratchpad show, move position center
 # Split direction is not intuitive and has been changed to make sense to me
 bindsym $mod+v split h
 bindsym $mod+h split v
@@ -55,8 +55,8 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+n exec $browser
-bindsym $mod+m exec vlc
+bindsym $mod+Shift+n exec $browser
+bindsym $mod+Shift+m exec vlc
 
 ## Multi Monitor bindings ##
 bindsym $mod+Ctrl+greater move workspace to output right
