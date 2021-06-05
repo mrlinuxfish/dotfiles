@@ -26,7 +26,6 @@ set $term termite
 set $browser firefox
 font pango:Inconsolata Bold 12
 focus_follows_mouse yes
-focus_follows_mouse no
 set $switcher rofi -location 2 -yoffset 44 -width 100 -font \\"pango:monospace 20\\" -show
 set $menu rofi -location 2 -yoffset 44 -width 100 -font \\"pango:monospace 20\\" -show run
 
