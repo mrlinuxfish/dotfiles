@@ -57,6 +57,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+n exec $browser
 bindsym $mod+Shift+m exec vlc
+bindsym $mod+Shift+p exec pcmanfm
 
 ## Multi Monitor bindings ##
 bindsym $mod+Ctrl+greater move workspace to output right
