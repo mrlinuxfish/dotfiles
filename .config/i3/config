@@ -26,8 +26,8 @@ set $term termite
 set $browser firefox
 font pango:Inconsolata Bold 12
 focus_follows_mouse yes
-set $switcher rofi -location 2 -yoffset 44 -width 100 -font \\"pango:monospace 20\\" -show
-set $menu rofi -location 2 -yoffset 44 -width 100 -font \\"pango:monospace 20\\" -show run
+set $switcher rofi -location 2 -yoffset 22 -width 100 -show
+set $menu rofi -location 2 -yoffset 22 -width 100 -show run
 
 # Dropdown/Scratchpad Windows
 for_window [instance="dropdown"] floating enable
