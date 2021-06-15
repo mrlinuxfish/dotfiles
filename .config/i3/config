@@ -25,8 +25,8 @@ set $term termite
 set $browser firefox
 font pango:monospace 10
 focus_follows_mouse yes
-set $switcher rofi -location 2 -yoffset 44 -width 100 -font \\"pango:monospace 20\\" -show
-set $menu rofi -location 2 -yoffset 44 -width 100 -font \\"pango:monospace 20\\" -show run
+set $switcher rofi -location 2 -yoffset 22 -width 100 -show
+set $menu rofi -location 2 -yoffset 22 -width 100 -show run
 
 # Dropdown/Scratchpad Windows
 for_window [instance="dropdown"] floating enable
@@ -57,6 +57,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+n exec $browser
 bindsym $mod+Shift+m exec vlc
+bindsym $mod+Shift+p exec pcmanfm
 
 ## Multi Monitor bindings ##
 bindsym $mod+Ctrl+greater move workspace to output right
