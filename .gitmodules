@@ -7,3 +7,6 @@
 [submodule ".config/plover/emily-symbols"]
 	path = .config/plover/emily-symbols
 	url = https://github.com/EPLHREU/emily-symbols.git
+[submodule ".config/plover/steno-dictionaries"]
+	path = .config/plover/steno-dictionaries
+	url = https://github.com/didoesdigital/steno-dictionaries.git
