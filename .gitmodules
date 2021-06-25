@@ -1,0 +1,9 @@
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".config/plover/emily-modifiers"]
+	path = .config/plover/emily-modifiers
+	url = https://github.com/EPLHREU/emily-modifiers.git
+[submodule ".config/plover/emily-symbols"]
+	path = .config/plover/emily-symbols
+	url = https://github.com/EPLHREU/emily-symbols.git
