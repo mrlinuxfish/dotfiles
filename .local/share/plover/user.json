@@ -1,4 +1,17 @@
 {
-"PHR*UP": "{PLOVER:LOOKUP}",
-"TKPWAOEUPB": "gaiwan"
+"TKPWAOEUPB": "gaiwan",
+"PHR*UP":"{PLOVER:LOOKUP}",
+"PHROFG":"{PLOVER:CONFIGURE}",
+"PHROFBGS":"{PLOVER:FOCUS}",
+"PHROBGT":"{PLOVER:QUIT}",
+"KA*PD":"{*-|}",
+"KA*PS":"{MODE:CAPS}",
+"KPA*L":"{<}",
+"*UPD":"{*<}",
+"HRO*ER":"{>}",
+"HRO*ERD":"{*>}",
+"#":"{*+}",
+"#*":"{*}",
+"AFPS":"{*?}",
+"TK-FPS":"{*!}"
 }
