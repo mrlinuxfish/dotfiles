@@ -16,6 +16,7 @@ exec_always sleep 2; nitrogen --restore &
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
 exec_always xset -b # Disable beep (audio bell)
+exec blueman-applet &
 
 # Basic Definitions
 hide_edge_borders both
