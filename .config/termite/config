@@ -7,8 +7,8 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
+font = pango:Inconsolata 11
 font = Noto Emoji Mono 11
-font = Noto Sans Mono 11
 font = Monospace 11
 scrollback_lines = 10000
 search_wrap = true
@@ -84,13 +84,13 @@ vim: ft=dosini cms=#%s
 # foreground = #dcdccc
 # foreground_bold = #ffffff
 # background = rgba(0,0,0,0.70)
-# 
+#
 # # 20% background transparency (requires a compositor)
 # #background = rgba(63, 63, 63, 0.8)
-# 
+#
 # # if unset, will reverse foreground and background
 # highlight = #2f2f2f
-# 
+#
 # # colors from color0 to color254 can be set
 # color0 = #3f3f3f
 # color1 = #705050
