@@ -40,6 +40,7 @@ setopt complete_aliases
 
 # Aliases
 alias vim="nvim"
+alias python="python3"
 
 # Ctrl backspace
 bindkey '^H' backward-kill-word
