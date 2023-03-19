@@ -16,6 +16,8 @@ exec_always sleep 2; nitrogen --restore &
 exec_always --no-startup-id xrdb -load ~/.Xresources # Load Xresources
 exec_always ~/.scripts/hardwareInit.sh # Run hardware configuration scripts
 exec_always xset -b # Disable beep (audio bell)
+# Apply display calibration provided by displaycal if installed
+exec_always if type "displaycal-apply-profiles" > /dev/null; then displaycal-apply-profiles; fi
 
 # Basic Definitions
 hide_edge_borders both
