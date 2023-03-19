@@ -15,10 +15,9 @@ off
 output VIRTUAL1
 off
 output DisplayPort-2
-crtc 0
+crtc 1
 mode 1680x1050
 pos 0x0
-primary
 rate 59.95
 rotate left
 x-prop-max_bpc 8
@@ -29,10 +28,11 @@ x-prop-underscan off
 x-prop-underscan_hborder 0
 x-prop-underscan_vborder 0
 output DisplayPort-3
-crtc 1
+crtc 0
 gamma 0.769:0.667:0.556
 mode 2560x1440
 pos 1050x0
+primary
 rate 143.97
 x-prop-max_bpc 8
 x-prop-non_desktop 0
