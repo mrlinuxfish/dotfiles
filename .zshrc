@@ -43,7 +43,7 @@ alias vim="nvim"
 alias python="python3"
 
 # Ctrl backspace
-bindkey '^H' backward-kill-word
+bindkey -M emacs '^H' backward-kill-word
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
