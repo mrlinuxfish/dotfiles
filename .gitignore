@@ -44,3 +44,6 @@ vim/.vim/init.vim
 .osu/user.reg
 .osu/userdef.reg
 .osu/winetricks.log
+
+# VS Code files
+*.code-workspace
